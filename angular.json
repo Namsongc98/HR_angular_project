@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "hrAngularProject"
+  "defaultProject": "hrAngularProject",
+  "cli": {
+    "analytics": false
+  }
 }
