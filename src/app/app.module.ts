@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LayoutHomeComponent } from './core/layout/layout-home/layout-home.component';
-import { DashboardComponent } from './features/dashboard/dashboard/dashboard.component';
+import { LayoutHomeModule } from './core/layout/layout-home/layout-home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutHomeComponent,
-    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutHomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
