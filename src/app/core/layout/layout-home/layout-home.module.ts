@@ -20,5 +20,9 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
     RouterModule,
     NzLayoutModule
   ],
+  bootstrap:[LayoutHomeComponent],
+  exports: [
+    LayoutHomeComponent,
+  ]
 })
 export class LayoutHomeModule { }
