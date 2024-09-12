@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule
   ],
+  bootstrap:[LayoutJobRequestComponent],
   exports: [
     LayoutJobRequestComponent,
   ]

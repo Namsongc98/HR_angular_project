@@ -11,46 +11,64 @@ import { DetailJobRequestComponent } from "src/app/features/job-requests/page/de
 
 
 export const routes: Routes = [
-    {
-      path: "",
-      component: LayoutHomeComponent ,
-      children: [
-        {
-          path: "",
-          component: DashboardComponent ,
-        },
-        {
-          path: "applicants",
-          component: LayoutApplicantsComponent ,
-          children: [
-            {
-              path: "",
-              component: ApplicantsComponent ,
-            },
-            {
-              path: ":id",
-              component: DetailApplicantComponent ,
-            },
-          ]
-        },
-        {
-          path: "job-requests",
-          component: LayoutJobRequestComponent ,
-          children: [
-            {
-              path: "",
-              component: JobRequestsComponent ,
-            },
-            {
-              path: "create-job-request",
-              component: CreateJobRequestComponent ,
-            },
-            {
-              path: ":id",
-              component: DetailJobRequestComponent ,
-            }
-          ]
-        },
-      ],
-    },
-  ];
+  {
+    path: "",
+    component: LayoutHomeComponent,
+    children: [
+      {
+        path: "",
+        component: DashboardComponent,
+      },
+      {
+        path: "applicants",
+        component: LayoutApplicantsComponent,
+        children: [
+          {
+            path: "",
+            component: ApplicantsComponent,
+          },
+          {
+            path: ":id",
+            component: DetailApplicantComponent,
+          },
+        ]
+      },
+      {
+        path: "job-requests",
+        component: LayoutJobRequestComponent,
+        children: [
+          {
+            path: "",
+            component: JobRequestsComponent,
+          },
+          {
+            path: "create-job-request",
+            component: CreateJobRequestComponent,
+          },
+          {
+            path: ":id",
+            component: DetailJobRequestComponent,
+          }
+        ]
+      },
+    ],
+  },
+];
+
+export const listNavRoutes = [
+  {
+    id: 1,
+    label: 'Dashboard',
+    to: "/"
+  },
+  {
+    id: 2,
+    label: 'Applicants',
+    to: "applicants"
+  },
+  {
+    id: 3,
+    label: 'Job Requests',
+    to: "job-requests"
+  }
+]
