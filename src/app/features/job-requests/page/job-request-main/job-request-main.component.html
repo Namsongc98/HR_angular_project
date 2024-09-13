@@ -1,2 +1,21 @@
-<p>job-request-main works!</p>
-<app-title-page></app-title-page>
+<div>
+  <div class="row justify-space-between align-center">
+    <app-title-page
+      [title]="'Job requests management'"
+      [backRouter]="false"
+    ></app-title-page>
+    <div class="row">
+      <app-button-common [btnData]="btnData"></app-button-common>
+    </div>
+  </div>
+  <div class="row align-center justify-space-between mt-24 mb-16 ">
+    <app-list-status [listStatus]='listStatus'></app-list-status>
+    <!-- <ListStatusComponent dataStatus={dataStatus} /> -->
+    <div class="container-combobox">
+      <!-- <ComboboxComponent dataCombobox={dataCombobox} /> -->
+    </div>
+  </div>
+  <div class="paper-bg w-full mt-0_8">
+    <!-- <TableComponent dataTable={dataTable} /> -->
+  </div>
+</div>

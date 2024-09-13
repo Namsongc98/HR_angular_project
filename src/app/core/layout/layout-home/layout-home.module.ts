@@ -12,13 +12,13 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 
 
 @NgModule({
-  declarations: [HeaderLayoutComponent,NavigateLayoutComponent, LayoutHomeComponent],
+  declarations: [HeaderLayoutComponent,NavigateLayoutComponent, LayoutHomeComponent ],
   imports: [
     CommonModule,
+    RouterModule,
+    NzLayoutModule,
     LayoutApplicantModule,
     LayoutJobRequestModule,
-    RouterModule,
-    NzLayoutModule
   ],
   bootstrap:[LayoutHomeComponent],
   exports: [

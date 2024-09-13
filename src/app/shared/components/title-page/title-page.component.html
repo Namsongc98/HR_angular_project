@@ -1,8 +1,7 @@
 <div class="row align-center">
-
-      <div class="mr-1" >
-        <img [src]='BackRouterIcon' alt="" />
-      </div>
-
-    <h3 class="font-weight-8 font-xxl">hello</h3>
+  <div class="mr-1" *ngIf="backRouter">
+    <img [src]="BackRouterIcon" alt="" />
   </div>
+
+  <h3 class="font-weight-8 font-xxl">{{ title }}</h3>
+</div>

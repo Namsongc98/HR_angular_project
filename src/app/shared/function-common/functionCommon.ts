@@ -1,0 +1,66 @@
+import { IStatusJobRequest } from "src/app/module/components/components.type";
+
+export const getAllHoursInDay = () => {
+    const hoursArray = [];
+    for (let hour = 0; hour < 24; hour++) {
+        hoursArray.push({ id: hour, label: hour, value: hour });
+    }
+    return hoursArray;
+};
+export const getAllMinutesInHour = () => {
+    const minutesArray = [];
+    for (let minute = 0; minute < 60; minute++) {
+        minutesArray.push({ id: minute, label: minute, value: minute });
+    }
+    return minutesArray;
+};
+
+// export const createComboBoxProps = (label: String, placeholder: String, value, name, listDataComboBox, onChange) => ({
+//     label,
+//     placeholder,
+//     value,
+//     name,
+//     listDataComboBox,
+//     onChange
+// })
+// export const createDateProp = (label:String, value, defaultValue, name, onChange, placeholder) => ({
+//     label,
+//     value,
+//     defaultValue,
+//     name,
+//     onChange,
+//     placeholder
+// });
+// export const createInputTextProp = (label: String,
+//     placeholder:String,
+//     type,
+//     value,
+//     name,
+//     onChange,) => ({
+//         label,
+//         placeholder,
+//         type,
+//         value,
+//         name,
+//         onChange,
+//     });
+// export const createTextareaProp = (label,
+//     placeholder,
+//     rows,
+//     cols,
+//     name,
+//     value,
+//     onChange) => ({
+//         label,
+//         placeholder,
+//         rows,
+//         cols,
+//         name,
+//         value,
+//         onChange,
+//     });
+export const btnInput = (label: String, styleBtn: String, onClick: ()=>void) => ({ label, styleBtn, onClick });
+
+// export const modalProp = (open, title, onClick) => ({ open, title, onClick });
+// export const tableProp = (columns, data, handleDoubleClickRow) => ({ columns, data, handleDoubleClickRow });
+ export const lisStatusInput = (dataStatus:IStatusJobRequest[], handleFilter?:()=>any ) => ({ dataStatus, handleFilter });

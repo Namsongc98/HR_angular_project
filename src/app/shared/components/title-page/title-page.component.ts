@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-title-page',
@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./title-page.component.scss']
 })
 export class TitlePageComponent implements OnInit {
-
   constructor() { }
 
+  @Input() title = "";
+  @Input() backRouter = false
   BackRouterIcon = "assets/icon/BackRouterIcon.svg"
 
   ngOnInit(): void {

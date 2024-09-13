@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DetailJobRequestComponent } from './detail-job-request.component';
-import { TitlePageComponent } from 'src/app/shared/components/title-page/title-page.component';
+import { DetailApplicantComponent } from 'src/app/features/applicants/page/detail-applicant/detail-applicant.component';
 
 
 
 @NgModule({
-  declarations: [DetailJobRequestComponent,TitlePageComponent],
+  declarations: [DetailApplicantComponent],
   imports: [
     CommonModule
   ]
