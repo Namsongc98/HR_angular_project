@@ -1,0 +1,9 @@
+<nav class="">
+  <ul class="mt-32">
+    <li *ngFor="let item of listNavRoutes" class="font-600 font-md display-flex align-center">
+      <a  [routerLink]="item.to" class="pl-16 display-flex align-center " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        {{item.label}}
+      </a>
+    </li>
+  </ul>
+</nav>
