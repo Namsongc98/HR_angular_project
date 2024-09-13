@@ -6,17 +6,23 @@ import { LayoutApplicantModule } from 'src/app/features/applicants/layout/layout
 import { LayoutJobRequestModule } from 'src/app/features/job-requests/layout/layout-job-request/layout-job-request.module';
 import { RouterModule } from '@angular/router';
 import { NavigateLayoutComponent } from '../navigate-layout/navigate-layout.component';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 
 
 
 
 @NgModule({
-  declarations: [HeaderLayoutComponent,NavigateLayoutComponent, LayoutHomeComponent],
+  declarations: [HeaderLayoutComponent,NavigateLayoutComponent, LayoutHomeComponent ],
   imports: [
     CommonModule,
+    RouterModule,
+    NzLayoutModule,
     LayoutApplicantModule,
     LayoutJobRequestModule,
-    RouterModule
   ],
+  bootstrap:[LayoutHomeComponent],
+  exports: [
+    LayoutHomeComponent,
+  ]
 })
 export class LayoutHomeModule { }

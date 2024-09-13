@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JobRequestsComponent } from './job-requests.component';
+import { ButtonCommonComponent } from './button-common.component';
 
-describe('JobRequestsComponent', () => {
-  let component: JobRequestsComponent;
-  let fixture: ComponentFixture<JobRequestsComponent>;
+describe('ButtonCommonComponent', () => {
+  let component: ButtonCommonComponent;
+  let fixture: ComponentFixture<ButtonCommonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ JobRequestsComponent ]
+      declarations: [ ButtonCommonComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(JobRequestsComponent);
+    fixture = TestBed.createComponent(ButtonCommonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

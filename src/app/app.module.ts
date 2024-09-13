@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutHomeModule } from './core/layout/layout-home/layout-home.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,

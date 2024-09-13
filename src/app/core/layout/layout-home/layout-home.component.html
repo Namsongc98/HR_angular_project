@@ -1,3 +1,13 @@
-<app-header-layout></app-header-layout>
-<app-navigate-layout></app-navigate-layout>
-<router-outlet></router-outlet>
+<nz-layout class="layout-container">
+  <nz-header>
+    <app-header-layout></app-header-layout>
+  </nz-header>
+  <nz-layout>
+    <nz-sider>
+      <app-navigate-layout></app-navigate-layout>
+    </nz-sider>
+    <nz-content>
+      <router-outlet></router-outlet>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
