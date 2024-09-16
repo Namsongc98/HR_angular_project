@@ -1,3 +1,5 @@
+import { ICompobox } from "src/app/module/components/components.type";
+
 export const LIST_STATUS_JOB_REQUEST = [
   {
     id: 1,
@@ -12,7 +14,7 @@ export const LIST_STATUS_JOB_REQUEST = [
     status: 'Closed'
   },
 ];
-export const LIST_COMBOBOX = [
+export const LIST_COMBOBOX: ICompobox[] = [
   {
     id: 1,
     label: 'Department',

@@ -1,17 +1,14 @@
 <div>
   <div class="row justify-space-between align-center">
-    <app-title-page
-      [title]="'Job requests management'"
-      [backRouter]="false"
-    ></app-title-page>
+    <app-title-page [title]="'Job requests management'" [backRouter]="false"></app-title-page>
     <div class="row">
       <app-button-common [btnData]="btnData"></app-button-common>
     </div>
   </div>
   <div class="row align-center justify-space-between mt-24 mb-16 ">
     <app-list-status [listStatus]='listStatus'></app-list-status>
-    <!-- <ListStatusComponent dataStatus={dataStatus} /> -->
     <div class="container-combobox">
+      <app-compobox-common [inputCompobox]="compoboxInput"></app-compobox-common>
       <!-- <ComboboxComponent dataCombobox={dataCombobox} /> -->
     </div>
   </div>
