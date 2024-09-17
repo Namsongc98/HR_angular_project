@@ -1,0 +1,13 @@
+<nz-select
+  nzAllowClear
+  nzPlaceHolder="{{ inputCompobox.placeholder }}"
+  [(ngModel)]="selectedValue"
+  (ngModelChange)="onChange.emit($event)"
+>
+  <nz-option
+    *ngFor="let item of inputCompobox.listDataComboBox"
+    [nzValue]="item"
+    [nzLabel]="item.label"
+  >
+  </nz-option>
+</nz-select>
