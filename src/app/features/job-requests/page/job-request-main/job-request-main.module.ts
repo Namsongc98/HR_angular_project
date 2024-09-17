@@ -17,7 +17,8 @@ import { NzTableModule } from 'ng-zorro-antd/table';
     CommonModule,
     NzSelectModule,
     FormsModule,
-    NzTableModule
-  ]
+    NzTableModule,
+  ],
+  bootstrap: [JobRequestMainComponent]
 })
 export class JobRequestMainModule { }
