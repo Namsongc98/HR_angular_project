@@ -29,8 +29,14 @@ export class JobRequestMainComponent implements OnInit {
   handleChangeRouter(event: any,): any {
     this.router.navigate(['/job-requests', event.data.key])
   }
-  handleSelectListStatus(item: IStatusJobRequest) {
-    console.log('list status', item);
+  handleSelectListStatus(itemClick: IStatusJobRequest) {
+    console.log('list status', itemClick);
+    const filterData = DATA_JOB_REQUEST.filter((item) => {
+      if (itemClick.status === "All")
+        return true
+      return item.status === itemClick.status
+    })
+    this.dataTableJobRequest.data = filterData
   }
 
 }

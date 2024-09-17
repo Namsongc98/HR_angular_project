@@ -46,3 +46,7 @@ export interface IDataJobRequest {
     status: string;
     actions: string;
 }
+
+export interface IStatus {
+    [key: string]: string
+}

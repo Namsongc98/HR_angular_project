@@ -1,24 +1,24 @@
-import { IColumn, ICompobox, IDataTable, IStatusJobRequest } from "src/app/module/components/components.type";
+import { IColumn, ICompobox, IDataTable, IStatus, IStatusJobRequest } from "src/app/module/components/components.type";
 
 export const getAllHoursInDay = () => {
-    const hoursArray = [];
-    for (let hour = 0; hour < 24; hour++) {
-        hoursArray.push({ id: hour, label: hour, value: hour });
-    }
-    return hoursArray;
+  const hoursArray = [];
+  for (let hour = 0; hour < 24; hour++) {
+    hoursArray.push({ id: hour, label: hour, value: hour });
+  }
+  return hoursArray;
 };
 export const getAllMinutesInHour = () => {
-    const minutesArray = [];
-    for (let minute = 0; minute < 60; minute++) {
-        minutesArray.push({ id: minute, label: minute, value: minute });
-    }
-    return minutesArray;
+  const minutesArray = [];
+  for (let minute = 0; minute < 60; minute++) {
+    minutesArray.push({ id: minute, label: minute, value: minute });
+  }
+  return minutesArray;
 };
 
 export const createComboBoxProps = (label: String, placeholder: String, listDataComboBox: ICompobox[]) => ({
-    label,
-    placeholder,
-    listDataComboBox,
+  label,
+  placeholder,
+  listDataComboBox,
 })
 // export const createDateProp = (label:String, value, defaultValue, name, onChange, placeholder) => ({
 //     label,
@@ -62,4 +62,13 @@ export const btnInput = (label: String, styleBtn: String, onClick: () => void) =
 export const tableInput = (columns: IColumn[], data: any[]) => ({ columns, data });
 export const lisStatusInput = (dataStatus: IStatusJobRequest[], handleFilter?: () => any) => ({ dataStatus, handleFilter });
 
-
+export const setClassNameColumnsTable = (dataColumns: any, status: IStatus, action: IStatus, data: any): string => {
+  switch (dataColumns.dataIndex) {
+    case 'status':
+      return status[data.status]
+    case 'actions':
+      return action[data.actions]
+    default:
+      return action['default']
+  }
+}
