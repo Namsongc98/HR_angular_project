@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { IInputCompobox } from 'src/app/module/components/components.type';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ICompobox, IInputCompobox } from 'src/app/module/components/components.type';
 
 @Component({
   selector: 'app-compobox-common',
@@ -8,18 +8,13 @@ import { IInputCompobox } from 'src/app/module/components/components.type';
 })
 export class CompoboxCommonComponent implements OnInit {
 
-  @Input() inputCompobox: IInputCompobox = { label: '', placeholder: '', listDataComboBox: [] }
+  @Input() inputCompobox: IInputCompobox = { label: '', placeholder: '', listDataComboBox: [] };
+  @Output() onChange = new EventEmitter<IInputCompobox>()
   selectedValue: any;
 
   constructor() { }
 
   ngOnInit(): void {
-    if (this.inputCompobox.listDataComboBox.length > 0) {
-      this.selectedValue = this.inputCompobox.listDataComboBox[0];  
-    }
   }
 
-  onChange(event: any): void {
-    console.log("Selected value:", event);
-  }
 }

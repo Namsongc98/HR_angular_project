@@ -1,18 +1,29 @@
 <div>
   <div class="row justify-space-between align-center">
-    <app-title-page [title]="'Job requests management'" [backRouter]="false"></app-title-page>
+    <app-title-page
+      [title]="'Job requests management'"
+      [backRouter]="false"
+    ></app-title-page>
     <div class="row">
       <app-button-common [btnData]="btnData"></app-button-common>
     </div>
   </div>
-  <div class="row align-center justify-space-between mt-24 mb-16 ">
-    <app-list-status [listStatus]='listStatus'></app-list-status>
+  <div class="row align-center justify-space-between mt-24 mb-16">
+    <app-list-status
+      [listStatus]="listStatus"
+      (onSelect)="handleSelectListStatus($event)"
+    ></app-list-status>
     <div class="container-combobox">
-      <app-compobox-common [inputCompobox]="compoboxInput"></app-compobox-common>
-      <!-- <ComboboxComponent dataCombobox={dataCombobox} /> -->
+      <app-compobox-common
+        [inputCompobox]="compoboxInput"
+        (onChange)="handleChangeCompobox($event)"
+      ></app-compobox-common>
     </div>
   </div>
   <div class="paper-bg w-full mt-0_8">
-    <!-- <TableComponent dataTable={dataTable} /> -->
+    <app-table-common
+      [dataTable]="dataTableJobRequest"
+      (onDoubleClick)="handleChangeRouter($event)"
+    ></app-table-common>
   </div>
 </div>

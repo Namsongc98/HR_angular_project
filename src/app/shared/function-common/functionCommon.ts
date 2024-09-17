@@ -1,4 +1,4 @@
-import { ICompobox, IStatusJobRequest } from "src/app/module/components/components.type";
+import { IColumn, ICompobox, IDataTable, IStatusJobRequest } from "src/app/module/components/components.type";
 
 export const getAllHoursInDay = () => {
     const hoursArray = [];
@@ -59,5 +59,7 @@ export const createComboBoxProps = (label: String, placeholder: String, listData
 export const btnInput = (label: String, styleBtn: String, onClick: () => void) => ({ label, styleBtn, onClick });
 
 // export const modalProp = (open, title, onClick) => ({ open, title, onClick });
-// export const tableProp = (columns, data, handleDoubleClickRow) => ({ columns, data, handleDoubleClickRow });
+export const tableInput = (columns: IColumn[], data: any[]) => ({ columns, data });
 export const lisStatusInput = (dataStatus: IStatusJobRequest[], handleFilter?: () => any) => ({ dataStatus, handleFilter });
+
+

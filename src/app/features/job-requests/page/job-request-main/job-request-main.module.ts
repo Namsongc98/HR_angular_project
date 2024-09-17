@@ -7,15 +7,17 @@ import { ListStatusComponent } from 'src/app/shared/components/list-status/list-
 import { CompoboxCommonComponent } from 'src/app/shared/components/compobox-common/compobox-common.component';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { FormsModule } from '@angular/forms';
-
+import { TableCommonComponent } from 'src/app/shared/components/table-common/table-common.component';
+import { NzTableModule } from 'ng-zorro-antd/table';
 
 
 @NgModule({
-  declarations: [JobRequestMainComponent, TitlePageComponent, ButtonCommonComponent,ListStatusComponent,CompoboxCommonComponent],
+  declarations: [JobRequestMainComponent, TitlePageComponent, ButtonCommonComponent, ListStatusComponent, CompoboxCommonComponent, TableCommonComponent],
   imports: [
     CommonModule,
     NzSelectModule,
-    FormsModule
+    FormsModule,
+    NzTableModule
   ]
 })
 export class JobRequestMainModule { }
