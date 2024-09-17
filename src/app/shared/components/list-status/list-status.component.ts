@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IStatusJobRequest, ListStatus } from 'src/app/module/components/components.type';
 
 @Component({
@@ -9,7 +9,8 @@ import { IStatusJobRequest, ListStatus } from 'src/app/module/components/compone
 export class ListStatusComponent implements OnInit {
   constructor() { }
 
-  @Input('listStatus') listStatus: IStatusJobRequest[] = []
+  @Input() listStatus: IStatusJobRequest[] = []
+  @Output() onSelect = new EventEmitter<IStatusJobRequest>()
   
   selectIdStatus: Number = 1
 
@@ -17,6 +18,7 @@ export class ListStatusComponent implements OnInit {
   }
 
   handleFilter(item: IStatusJobRequest) {
+    this.onSelect.emit(item)
     this.selectIdStatus = item.id
   }
 

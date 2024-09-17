@@ -1,0 +1,17 @@
+<nz-table #basicTable [nzData]="dataTable.data" [nzFrontPagination]="false">
+  <thead>
+    <tr>
+      <th *ngFor="let column of dataTable.columns">{{ column.title }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let data of dataTable.data"
+      (dblclick)="handleDoubleClick($event,data)"
+    >
+      <td *ngFor="let column of dataTable.columns">
+        {{ data[column.dataIndex] }}
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

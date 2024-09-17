@@ -8,14 +8,22 @@
       <app-button-common [btnData]="btnData"></app-button-common>
     </div>
   </div>
-  <div class="row align-center justify-space-between mt-24 mb-16 ">
-    <app-list-status [listStatus]='listStatus'></app-list-status>
-    <!-- <ListStatusComponent dataStatus={dataStatus} /> -->
+  <div class="row align-center justify-space-between mt-24 mb-16">
+    <app-list-status
+      [listStatus]="listStatus"
+      (onSelect)="handleSelectListStatus($event)"
+    ></app-list-status>
     <div class="container-combobox">
-      <!-- <ComboboxComponent dataCombobox={dataCombobox} /> -->
+      <app-compobox-common
+        [inputCompobox]="compoboxInput"
+        (onChange)="handleChangeCompobox($event)"
+      ></app-compobox-common>
     </div>
   </div>
   <div class="paper-bg w-full mt-0_8">
-    <!-- <TableComponent dataTable={dataTable} /> -->
+    <app-table-common
+      [dataTable]="dataTableJobRequest"
+      (onDoubleClick)="handleChangeRouter($event)"
+    ></app-table-common>
   </div>
 </div>
