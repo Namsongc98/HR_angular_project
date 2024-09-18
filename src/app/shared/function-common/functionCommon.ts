@@ -1,4 +1,4 @@
-import { IColumn, ICompobox, IDataTable, IStatus, IStatusJobRequest } from "src/app/module/components/components.type";
+import { IColumn, ICompobox, IDataTable, IStatus, IStatusItem } from "src/app/module/components/components.type";
 
 export const getAllHoursInDay = () => {
   const hoursArray = [];
@@ -60,7 +60,7 @@ export const btnInput = (label: string, styleBtn: string, onClick: () => void) =
 
 // export const modalProp = (open, title, onClick) => ({ open, title, onClick });
 export const tableInput = (columns: IColumn[], data: any[]) => ({ columns, data });
-export const lisStatusInput = (dataStatus: IStatusJobRequest[], handleFilter?: () => any) => ({ dataStatus, handleFilter });
+export const lisStatusInput = (dataStatus: IStatusItem[], handleFilter?: () => any) => ({ dataStatus, handleFilter });
 
 export const setClassNameColumnsTable = (dataColumns: any, status: IStatus, action: IStatus, data: any): string => {
   switch (dataColumns.dataIndex) {

@@ -1,7 +1,7 @@
 import { setClassNameColumnsTable } from './../../function-common/functionCommon';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IInputTable } from 'src/app/module/components/components.type';
-import { CONSTANTS_ACTION, CONSTANTS_STATUS_CV } from '../../constant/constant';
+import { CONSTANTS_ACTION, CONSTANTS_STATUS_CV } from '../../constant/constant-page/job-request/constant';
 
 @Component({
   selector: 'app-table-common',

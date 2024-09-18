@@ -1,12 +1,20 @@
 export interface IButton { label: String, styleBtn: String, onClick: () => void }
 export type ListStatus = {
-    dataStatus: IStatusJobRequest[],
+    dataStatus: IStatusItem[],
 }
 
-export interface IStatusJobRequest {
-    id: Number,
-    status: String
+export interface IStatusItem {
+    id: number,
+    status: string,
+    counter?: number
 }
+export interface IStatusApplicant extends IStatusItem {
+    id: number,
+    status: string,
+    counter: number
+}
+
+
 
 export interface ICompobox {
     id: number;
@@ -45,6 +53,13 @@ export interface IDataJobRequest {
     created_at: string;
     status: string;
     actions: string;
+}
+export interface IDataApplicant {
+    key: number;
+    candidate_name: string;
+    job_title: string;
+    applied_at: string;
+    status: string;
 }
 
 export interface IStatus {

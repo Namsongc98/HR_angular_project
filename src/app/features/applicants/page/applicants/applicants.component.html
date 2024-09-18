@@ -1,1 +1,14 @@
-<p>applicants works!</p>
+<div className="">
+    <div className="row justify-space-between align-center">
+        <app-title-page [title]="'Applicants management'" [backRouter]="true"></app-title-page>
+
+    </div>
+    <div className="row mt-24">
+        <app-list-status [listStatus]="listStatus" (onSelect)="handleSelectListStatus($event)"></app-list-status>
+    </div>
+    <div className="paper-bg w-full mt-08">
+        <app-table-common [dataTable]="dataTableJobRequest"
+            (onDoubleClick)="handleChangeRouter($event)"></app-table-common>
+        <!-- <TableComponent dataTable={dataTable} /> -->
+    </div>
+</div>

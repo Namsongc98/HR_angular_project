@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IButton, IInputCompobox, IInputTag, ITextareaTag } from 'src/app/module/components/components.type';
 import { IJob } from 'src/app/module/interface/job.interface';
-import { CONSTANTS_DEPARTMENT, CONSTANTS_LEVEL } from 'src/app/shared/constant/constant';
+import { CONSTANTS_DEPARTMENT, CONSTANTS_LEVEL } from 'src/app/shared/constant/constant-page/job-request/constant';
+
 import { btnInput, createComboBoxProps, createInputTextInput, createTextareaInput } from 'src/app/shared/function-common/functionCommon';
 
 @Component({
