@@ -5,11 +5,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr
-      *ngFor="let data of dataTable.data"
-      (dblclick)="handleDoubleClick($event,data)"
-    >
-      <td *ngFor="let column of dataTable.columns">
+    <tr *ngFor="let data of dataTable.data" (dblclick)="handleDoubleClick($event,data)">
+      <td *ngFor="let column of dataTable.columns" [class]="setClassNameColumnsTable(column,data)">
         {{ data[column.dataIndex] }}
       </td>
     </tr>

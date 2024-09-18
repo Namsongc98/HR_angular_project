@@ -1,0 +1,9 @@
+<div>
+    <label [for]="dataInputTextarea.name" class="mt-08 mb-09 label">{{dataInputTextarea.label}}</label>
+    <div class="w-full h-full wp-txt_area">
+        <textarea [name]="dataInputTextarea.name" [id]="dataInputTextarea.name" [(ngModel)]="dataInputTextarea.value"
+            [rows]="dataInputTextarea.rows" [cols]="dataInputTextarea.cols" (ngModelChange)="onModelChange.emit($event)"
+            [value]="dataInputTextarea.value" [placeholder]="dataInputTextarea.placeholder"
+            class="w-full h-full font-md "></textarea>
+    </div>
+</div>
