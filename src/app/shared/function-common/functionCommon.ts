@@ -15,10 +15,11 @@ export const getAllMinutesInHour = () => {
   return minutesArray;
 };
 
-export const createComboBoxProps = (label: String, placeholder: String, listDataComboBox: ICompobox[]) => ({
+export const createComboBoxProps = (label: string, placeholder: string, listDataComboBox: ICompobox[], name: string) => ({
   label,
   placeholder,
   listDataComboBox,
+  name
 })
 // export const createDateProp = (label:String, value, defaultValue, name, onChange, placeholder) => ({
 //     label,
@@ -28,19 +29,19 @@ export const createComboBoxProps = (label: String, placeholder: String, listData
 //     onChange,
 //     placeholder
 // });
-// export const createInputTextProp = (label: String,
-//     placeholder:String,
-//     type,
-//     value,
-//     name,
-//     onChange,) => ({
-//         label,
-//         placeholder,
-//         type,
-//         value,
-//         name,
-//         onChange,
-//     });
+export const createInputTextInput = (label: string,
+  placeholder: string,
+  type: string,
+  value: string,
+  name: string,
+) => ({
+  label,
+  placeholder,
+  type,
+  value,
+  name,
+
+});
 // export const createTextareaProp = (label,
 //     placeholder,
 //     rows,
@@ -56,7 +57,7 @@ export const createComboBoxProps = (label: String, placeholder: String, listData
 //         value,
 //         onChange,
 //     });
-export const btnInput = (label: String, styleBtn: String, onClick: () => void) => ({ label, styleBtn, onClick });
+export const btnInput = (label: string, styleBtn: string, onClick: () => void) => ({ label, styleBtn, onClick });
 
 // export const modalProp = (open, title, onClick) => ({ open, title, onClick });
 export const tableInput = (columns: IColumn[], data: any[]) => ({ columns, data });

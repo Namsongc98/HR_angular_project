@@ -15,8 +15,8 @@ export interface ICompobox {
 }
 
 export interface IInputCompobox {
-    label: String;
-    placeholder: String;
+    label: string;
+    placeholder: string;
     listDataComboBox: ICompobox[];
 }
 
@@ -50,3 +50,11 @@ export interface IDataJobRequest {
 export interface IStatus {
     [key: string]: string
 }
+
+export interface IInputTag {
+    label: string;
+    placeholder: string;
+    type: string;
+    value: string;
+    name: string;
+  }

@@ -16,7 +16,7 @@ import { btnInput, createComboBoxProps, lisStatusInput, tableInput } from 'src/a
 export class JobRequestMainComponent implements OnInit {
   btnData: IButton = btnInput("New Job", "btn-blue", () => this.handleClickNewJob())
   listStatus: IStatusJobRequest[] = LIST_STATUS_JOB_REQUEST
-  compoboxInput = createComboBoxProps(' ', 'Select Department', LIST_COMBOBOX)
+  compoboxInput = createComboBoxProps(' ', 'Select Department', LIST_COMBOBOX, '')
 
   tData: Array<IDataJobRequest> = DATA_JOB_REQUEST;
   dataTableJobRequest = tableInput(COLUMNS_JOB_REQUEST, this.tData)

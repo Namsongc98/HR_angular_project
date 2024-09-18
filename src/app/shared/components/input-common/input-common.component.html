@@ -1,0 +1,15 @@
+<div class="wrapper-input">
+  <label class="label" [for]="dataInput.name">{{ dataInput.label }}</label>
+  <div class="wp-input">
+    <input
+      [name]="dataInput.name"
+      [id]="dataInput.name"
+      [(ngModel)]="dataInput.value"
+      (ngModelChange)="onModelChange.emit($event)"
+      [value]="dataInput.value"
+      [placeholder]="dataInput.placeholder"
+      [type]="dataInput.type"
+      class="w-full h-full font-md"
+    />
+  </div>
+</div>
