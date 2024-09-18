@@ -32,9 +32,11 @@
       </div>
       <div class="row gap-16">
         <div class="col-xl-6">
+          <app-date-pick-common [dataInput]='dateStart'></app-date-pick-common>
           <!-- <DatePickComponent dateDta={dateStart} /> -->
         </div>
         <div class="col-xl-6">
+          <app-date-pick-common [dataInput]='dateEnd'></app-date-pick-common>
           <!-- <DatePickComponent dateDta={dateEnd} /> -->
         </div>
       </div>
@@ -52,7 +54,6 @@
     <div class="mt-16 wp-text_area">
       <app-textarea-common [dataInputTextarea]="textareaJobDescription"
         (onModelChange)="handleChange($event, 'description')"></app-textarea-common>
-      <!-- <TextareaComponent dataTextarea={textareaJobDescription} /> -->
     </div>
   </div>
 </div>

@@ -81,3 +81,6 @@ export interface ITextareaTag {
     name: string;
     value: string;
 }
+export interface IDatePick {
+    label: string; value: string; defaultValue: string ; name: string; placeholder: string
+}

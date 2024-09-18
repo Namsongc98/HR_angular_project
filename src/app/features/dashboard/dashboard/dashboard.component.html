@@ -1,1 +1,73 @@
-<p>dashboard works!</p>
+<div class="row justify-space-between align-center">
+    <!-- <TitleComponent title='Dashboard' /> -->
+    <div class="wrapper_date-week display-flex align-center">
+        <!-- <DateWeekComponent dateDta={dateInterviewer} /> -->
+    </div>
+</div>
+<div class="row">
+    <div class="row gap-02 mt-24 mb-24 w-full">
+
+        <div class="col-xl-3" key={item.id}>
+            <div class="paper-bg p-16">
+                <p class="font-md text-gray"></p>
+                <h4 class="font-xl"></h4>
+            </div>
+        </div>
+
+    </div>
+    <div class="row w-full gap-24">
+        <div class="row col-xl-8">
+            <div class="w-full">
+                <div class="paper-bg p-12">
+                    <div class="display-flex align-center justify-space-between">
+                        <p class="font-xl text-black font-600">New applicants</p>
+                        <!-- <Link class="font-md text-blue font-400 cursor-pointer" to={'/applicants'}>Show more</Link> -->
+                    </div>
+                    <div class="display-flex align-center justify-space-between">
+                        <!-- <TableComponent dataTable={dataTableNewJob} /> -->
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mt-24">
+                <div class="paper-bg p-12">
+                    <div class="display-flex align-center justify-space-between">
+                        <p class="font-xl text-black font-600">New applicants</p>
+                        <!-- <Link class="font-md text-blue font-400 cursor-pointer" to={'/applicants'}>Show more</Link> -->
+                    </div>
+                    <div class="display-flex align-center justify-space-between">
+                        <!-- <TableComponent dataTable={dataTableOpened} /> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="paper-bg p-16 scrollbar-custom wp__left-side">
+                <p class="font-xl font-600 text-black">To interview today (12)</p>
+
+                <div class="pt-12 pb-12" key={item.id}>
+                    <div class="wp__item-inter">
+                        <div class="row justify-space-between align-center">
+                            <div class="row">
+                                <span class="font-6"></span>
+                                <!-- <span class={'ml-08 ' + CONSTANTS_STATUS_INTERVIEWER[item.status]}>{item.status}</span> -->
+                            </div>
+                            <span class="text-gray"></span>
+                        </div>
+                        <div class="">
+                            <span class="text-gray title-interview">Job title:</span>
+                            <span class="truncate"></span>
+                        </div>
+                        <div class="">
+                            <span class="text-gray title-interview">Department:</span>
+                            <span class="truncate"></span>
+                        </div>
+                        <div class="">
+                            <span class="text-gray title-interview">Interviewer:</span>
+                            <span class="truncate"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
