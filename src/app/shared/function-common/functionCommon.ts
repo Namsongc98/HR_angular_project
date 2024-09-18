@@ -42,21 +42,20 @@ export const createInputTextInput = (label: string,
   name,
 
 });
-// export const createTextareaProp = (label,
-//     placeholder,
-//     rows,
-//     cols,
-//     name,
-//     value,
-//     onChange) => ({
-//         label,
-//         placeholder,
-//         rows,
-//         cols,
-//         name,
-//         value,
-//         onChange,
-//     });
+export const createTextareaInput = (label: string,
+  placeholder: string,
+  rows: string,
+  cols: string,
+  name: string,
+  value: string) => ({
+    label,
+    placeholder,
+    rows,
+    cols,
+    name,
+    value,
+
+  });
 export const btnInput = (label: string, styleBtn: string, onClick: () => void) => ({ label, styleBtn, onClick });
 
 // export const modalProp = (open, title, onClick) => ({ open, title, onClick });

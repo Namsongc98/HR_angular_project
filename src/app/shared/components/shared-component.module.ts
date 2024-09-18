@@ -9,18 +9,19 @@ import { TableCommonComponent } from './table-common/table-common.component';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { InputCommonComponent } from './input-common/input-common.component';
+import { TextareaCommonComponent } from './textarea-common/textarea-common.component';
 
 
 
 
 @NgModule({
-  declarations: [TitlePageComponent, ButtonCommonComponent, ListStatusComponent, CompoboxCommonComponent, TableCommonComponent, InputCommonComponent],
+  declarations: [TitlePageComponent, ButtonCommonComponent, ListStatusComponent, CompoboxCommonComponent, TableCommonComponent, InputCommonComponent, TextareaCommonComponent],
   imports: [
     CommonModule,
     FormsModule,
     NzSelectModule,
     NzTableModule,
   ],
-  exports: [TitlePageComponent, ButtonCommonComponent, ListStatusComponent, CompoboxCommonComponent, TableCommonComponent,InputCommonComponent]
+  exports: [TitlePageComponent, ButtonCommonComponent, ListStatusComponent, CompoboxCommonComponent, TableCommonComponent, InputCommonComponent, TextareaCommonComponent]
 })
 export class SharedComponentModule { }

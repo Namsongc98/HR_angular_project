@@ -57,4 +57,12 @@ export interface IInputTag {
     type: string;
     value: string;
     name: string;
-  }
+}
+export interface ITextareaTag {
+    label: string;
+    placeholder: string;
+    rows: string;
+    cols: string;
+    name: string;
+    value: string;
+}
