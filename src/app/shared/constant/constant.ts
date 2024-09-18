@@ -245,13 +245,17 @@ export const CONSTANTS_STATUS_CV = {
   "Pass Round 2": "text-green",
   'Scheduled round 2': 'text-yellow',
   Fail: "text-red",
+  'Opened': 'text-green',
+  'Closed': 'text-gray'
 };
 export const CONSTANTS_STATUS = {
   'Opened': 'text-green',
   'Closed': 'text-gray'
 };
 export const CONSTANTS_ACTION = {
-  'default': 'text-purple'
+  "Close": 'text-purple',
+  "Open": 'text-purple',
+  'default': ' '
 };
 
 export const CONSTANTS_DEPARTMENT = [

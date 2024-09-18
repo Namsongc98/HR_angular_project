@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -6,13 +7,16 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./title-page.component.scss']
 })
 export class TitlePageComponent implements OnInit {
-  constructor() { }
+  constructor(private location: Location) { }
 
   @Input() title = "";
   @Input() backRouter = false
   BackRouterIcon = "assets/icon/BackRouterIcon.svg"
 
   ngOnInit(): void {
+  }
+  goBack(): void {
+    this.location.back();
   }
 
 }

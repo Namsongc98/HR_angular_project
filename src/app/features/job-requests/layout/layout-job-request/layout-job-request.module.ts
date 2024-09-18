@@ -7,11 +7,6 @@ import { CreateJobRequestModule } from '../../page/create-job-request/create-job
 import { DetailJobRequestModule } from '../../page/detail-job-request/detail-job-request.module';
 import { FormsModule } from '@angular/forms';
 
-
-
-
-
-
 @NgModule({
   declarations: [LayoutJobRequestComponent],
   imports: [

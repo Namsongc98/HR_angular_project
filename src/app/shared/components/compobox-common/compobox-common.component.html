@@ -1,13 +1,10 @@
-<nz-select
-  nzAllowClear
-  nzPlaceHolder="{{ inputCompobox.placeholder }}"
-  [(ngModel)]="selectedValue"
-  (ngModelChange)="onChange.emit($event)"
->
-  <nz-option
-    *ngFor="let item of inputCompobox.listDataComboBox"
-    [nzValue]="item"
-    [nzLabel]="item.label"
-  >
-  </nz-option>
-</nz-select>
+<div class="wp-combobox">
+  <label class="label">{{inputCompobox.label}}</label>
+
+  <nz-select nzAllowClear nzPlaceHolder="{{ inputCompobox.placeholder }}" [(ngModel)]="selectedValue"
+    (ngModelChange)="onChange.emit($event)">
+    <nz-option *ngFor="let item of inputCompobox.listDataComboBox" [nzValue]="item" [nzLabel]="item.label">
+    </nz-option>
+  </nz-select>
+
+</div>
