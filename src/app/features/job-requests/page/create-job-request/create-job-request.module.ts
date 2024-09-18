@@ -3,14 +3,18 @@ import { CommonModule } from '@angular/common';
 import { CreateJobRequestComponent } from './create-job-request.component';
 
 import { FormsModule } from '@angular/forms';
+import { SharedComponentModule } from 'src/app/shared/components/shared-component.module';
+
+
 
 
 
 @NgModule({
-  declarations: [CreateJobRequestComponent, ],
+  declarations: [CreateJobRequestComponent],
   imports: [
     CommonModule,
     FormsModule,
+    SharedComponentModule
   ],
   bootstrap: [CreateJobRequestComponent]
 })
