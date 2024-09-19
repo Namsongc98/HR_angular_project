@@ -7,6 +7,7 @@ import { LayoutJobRequestModule } from 'src/app/features/job-requests/layout/lay
 import { RouterModule } from '@angular/router';
 import { NavigateLayoutComponent } from '../navigate-layout/navigate-layout.component';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { SharedComponentModule } from 'src/app/shared/components/shared-component.module';
 
 
 
@@ -19,6 +20,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
     NzLayoutModule,
     LayoutApplicantModule,
     LayoutJobRequestModule,
+    SharedComponentModule
   ],
   bootstrap:[LayoutHomeComponent],
   exports: [

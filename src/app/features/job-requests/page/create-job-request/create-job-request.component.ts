@@ -33,8 +33,8 @@ export class CreateJobRequestComponent implements OnInit {
   inputVacancies: IInputTag = createInputTextInput("Number of vacancies", 'Enter number', 'number', this.dataCreateJob.number_of_vacancies, 'number_of_vacancies')
   inputInterviews: IInputTag = createInputTextInput("Number of interviews", 'Enter number', 'number', this.dataCreateJob.number_of_interviews, 'number_of_interviews')
   textareaJobDescription: ITextareaTag = createTextareaInput("Job description", 'Enter job description', '5', '50', 'description', this.dataCreateJob.description,)
-  dateStart: IDatePick = createDateInput("Start date", this.dataCreateJob.start_date, '', 'start_date', 'Select start date')
-  dateEnd: IDatePick = createDateInput("End date", this.dataCreateJob.end_date, '', 'end_date', 'Select end date')
+  dateStart: IDatePick = createDateInput("Start date", this.dataCreateJob.start_date, '', 'start_date', 'Select start date', 'date')
+  dateEnd: IDatePick = createDateInput("End date", this.dataCreateJob.end_date, '', 'end_date', 'Select end date', 'date')
 
 
   constructor() { }

@@ -14,8 +14,6 @@ import { DatePickCommonComponent } from './date-pick-common/date-pick-common.com
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 
 
-
-
 @NgModule({
   declarations: [TitlePageComponent, ButtonCommonComponent, ListStatusComponent, CompoboxCommonComponent, TableCommonComponent, InputCommonComponent, TextareaCommonComponent, DatePickCommonComponent],
   imports: [
