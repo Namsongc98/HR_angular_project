@@ -8,12 +8,13 @@ import { RouterModule } from '@angular/router';
 import { NavigateLayoutComponent } from '../navigate-layout/navigate-layout.component';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { SharedComponentModule } from 'src/app/shared/components/shared-component.module';
+import { DashboardComponent } from 'src/app/features/dashboard/dashboard/dashboard.component';
 
 
 
 
 @NgModule({
-  declarations: [HeaderLayoutComponent,NavigateLayoutComponent, LayoutHomeComponent ],
+  declarations: [HeaderLayoutComponent,NavigateLayoutComponent, LayoutHomeComponent,DashboardComponent ],
   imports: [
     CommonModule,
     RouterModule,

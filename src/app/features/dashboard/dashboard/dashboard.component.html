@@ -1,20 +1,16 @@
 <div class="row justify-space-between align-center">
   <app-title-page [title]="'Dashboard'" [backRouter]="false"></app-title-page>
-  <!-- <app-title-page></app-title-page> -->
-  <div class="wrapper_date-week display-flex align-center">
-    <!-- <app-date-pick-common
-      [dataInput]="dataWeek"
-      (onChange)="handleChange($event, 'date_week')"
-    ></app-date-pick-common> -->
-    <!-- <DateWeekComponent dateDta={dateInterviewer} /> -->
+  <div class="wrapper_date-week">
+    <app-date-pick-common [dataInput]="dateInterviewer"
+      (onChange)="handleChange($event, 'week')"></app-date-pick-common>
   </div>
 </div>
 <div class="row">
   <div class="row gap-02 mt-24 mb-24 w-full">
-    <div class="col-xl-3">
+    <div class="col-xl-3" *ngFor=" let item of listNumber">
       <div class="paper-bg p-16">
-        <p class="font-md text-gray"></p>
-        <h4 class="font-xl"></h4>
+        <p class="font-md text-gray">{{item.title}}</p>
+        <h4 class="font-xl">{{item.count}}</h4>
       </div>
     </div>
   </div>
@@ -24,10 +20,10 @@
         <div class="paper-bg p-12">
           <div class="display-flex align-center justify-space-between">
             <p class="font-xl text-black font-600">New applicants</p>
-            <!-- <Link class="font-md text-blue font-400 cursor-pointer" to={'/applicants'}>Show more</Link> -->
+            <a class="font-md text-blue font-500 cursor-pointer" [routerLink]="'/applicants'">Show more</a>
           </div>
-          <div class="display-flex align-center justify-space-between">
-            <!-- <TableComponent dataTable={dataTableNewJob} /> -->
+          <div class="display-flex align-center justify-space-between p-12">
+            <app-table-common [dataTable]="dataTableJobRequest" class="w-full"></app-table-common>
           </div>
         </div>
       </div>
@@ -35,10 +31,10 @@
         <div class="paper-bg p-12">
           <div class="display-flex align-center justify-space-between">
             <p class="font-xl text-black font-600">New applicants</p>
-            <!-- <Link class="font-md text-blue font-400 cursor-pointer" to={'/applicants'}>Show more</Link> -->
+            <a class="font-md text-blue font-500 cursor-pointer" [routerLink]="'/applicants'">Show more</a>
           </div>
-          <div class="display-flex align-center justify-space-between">
-            <!-- <TableComponent dataTable={dataTableOpened} /> -->
+          <div class="display-flex align-center justify-space-between p-12">
+            <app-table-common [dataTable]="dataTableJobRequest" class="w-full"></app-table-common>
           </div>
         </div>
       </div>
@@ -47,26 +43,26 @@
       <div class="paper-bg p-16 scrollbar-custom wp__left-side">
         <p class="font-xl font-600 text-black">To interview today (12)</p>
 
-        <div class="pt-12 pb-12">
+        <div class="pt-12 pb-12" *ngFor="let item of dataInterview">
           <div class="wp__item-inter">
             <div class="row justify-space-between align-center">
               <div class="row">
-                <span class="font-6"></span>
-                <!-- <span class={'ml-08 ' + CONSTANTS_STATUS_INTERVIEWER[item.status]}>{item.status}</span> -->
+                <span class="font-6">{{item.name_interview}}</span>
+                <span class="ml-16" [ngClass]="CONSTANTS_STATUS_INTERVIEWER[item.status] || '' ">{{item.status}}</span>
               </div>
-              <span class="text-gray"></span>
+              <span class="text-gray">{{item.time}}</span>
             </div>
             <div class="">
               <span class="text-gray title-interview">Job title:</span>
-              <span class="truncate"></span>
+              <span class="truncate">{{item.job_title}}</span>
             </div>
             <div class="">
               <span class="text-gray title-interview">Department:</span>
-              <span class="truncate"></span>
+              <span class="truncate">{{item.department}}</span>
             </div>
             <div class="">
               <span class="text-gray title-interview">Interviewer:</span>
-              <span class="truncate"></span>
+              <span class="truncate">{{item.interviewer}}</span>
             </div>
           </div>
         </div>
