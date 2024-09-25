@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DetailApplicantComponent } from 'src/app/features/applicants/page/detail-applicant/detail-applicant.component';
+import { DetailJobRequestComponent } from './detail-job-request.component';
 
 
 
 @NgModule({
-  declarations: [DetailApplicantComponent],
+  declarations: [DetailJobRequestComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  bootstrap:[DetailJobRequestComponent]
 })
 export class DetailJobRequestModule { }

@@ -12,10 +12,11 @@ import { InputCommonComponent } from './input-common/input-common.component';
 import { TextareaCommonComponent } from './textarea-common/textarea-common.component';
 import { DatePickCommonComponent } from './date-pick-common/date-pick-common.component';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { ModalConfirmComponent } from './modal-confirm/modal-confirm.component';
 
 
 @NgModule({
-  declarations: [TitlePageComponent, ButtonCommonComponent, ListStatusComponent, CompoboxCommonComponent, TableCommonComponent, InputCommonComponent, TextareaCommonComponent, DatePickCommonComponent],
+  declarations: [TitlePageComponent, ButtonCommonComponent, ListStatusComponent, CompoboxCommonComponent, TableCommonComponent, InputCommonComponent, TextareaCommonComponent, DatePickCommonComponent, ModalConfirmComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -23,6 +24,6 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
     NzTableModule,
     NzDatePickerModule
   ],
-  exports: [TitlePageComponent, ButtonCommonComponent, ListStatusComponent, CompoboxCommonComponent, TableCommonComponent, InputCommonComponent, TextareaCommonComponent, DatePickCommonComponent]
+  exports: [TitlePageComponent, ButtonCommonComponent, ListStatusComponent, CompoboxCommonComponent, TableCommonComponent, InputCommonComponent, TextareaCommonComponent, DatePickCommonComponent,ModalConfirmComponent]
 })
 export class SharedComponentModule { }

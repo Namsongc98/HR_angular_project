@@ -9,6 +9,7 @@ import { NavigateLayoutComponent } from '../navigate-layout/navigate-layout.comp
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { SharedComponentModule } from 'src/app/shared/components/shared-component.module';
 import { DashboardComponent } from 'src/app/features/dashboard/dashboard/dashboard.component';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 
 
 
@@ -21,7 +22,8 @@ import { DashboardComponent } from 'src/app/features/dashboard/dashboard/dashboa
     NzLayoutModule,
     LayoutApplicantModule,
     LayoutJobRequestModule,
-    SharedComponentModule
+    SharedComponentModule,
+    NzDividerModule
   ],
   bootstrap:[LayoutHomeComponent],
   exports: [
