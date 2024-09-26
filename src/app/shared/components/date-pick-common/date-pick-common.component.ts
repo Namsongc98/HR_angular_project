@@ -6,7 +6,6 @@ import { IDatePick } from 'src/app/module/components/components.type';
 @Component({
   selector: 'app-date-pick-common',
   templateUrl: './date-pick-common.component.html',
-  styleUrls: ['./date-pick-common.component.scss']
 })
 export class DatePickCommonComponent implements OnInit {
   @Input() dataInput: IDatePick = { label: '', value: '', defaultValue: '', name: '', placeholder: '',type:'date' };

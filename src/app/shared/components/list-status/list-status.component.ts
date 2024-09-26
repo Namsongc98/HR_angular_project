@@ -4,7 +4,6 @@ import { IStatusItem, ListStatus } from 'src/app/module/components/components.ty
 @Component({
   selector: 'app-list-status',
   templateUrl: './list-status.component.html',
-  styleUrls: ['./list-status.component.scss']
 })
 export class ListStatusComponent implements OnInit {
   constructor() { }

@@ -6,7 +6,7 @@ import { CONSTANTS_ACTION, CONSTANTS_STATUS_CV } from '../../constant/constant-p
 @Component({
   selector: 'app-table-common',
   templateUrl: './table-common.component.html',
-  styleUrls: ['./table-common.component.scss']
+
 })
 export class TableCommonComponent implements OnInit {
   @Input() dataTable: IInputTable = { columns: [], data: [] }

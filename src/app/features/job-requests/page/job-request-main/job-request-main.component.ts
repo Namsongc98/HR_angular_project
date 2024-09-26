@@ -9,7 +9,6 @@ import { btnInput, createComboBoxProps, lisStatusInput, tableInput } from 'src/a
 @Component({
   selector: 'app-job-request-main',
   templateUrl: './job-request-main.component.html',
-  styleUrls: ['./job-request-main.component.scss'],
   providers: [{
     provide: TitlePageComponent
   }]

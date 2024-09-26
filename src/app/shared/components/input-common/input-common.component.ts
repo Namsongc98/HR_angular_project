@@ -7,7 +7,6 @@ import { IInputTag } from 'src/app/module/components/components.type';
 @Component({
   selector: 'app-input-common',
   templateUrl: './input-common.component.html',
-  styleUrls: ['./input-common.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 
