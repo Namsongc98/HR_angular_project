@@ -1,4 +1,4 @@
-export interface IButton { label: String, styleBtn: String, onClick: () => void }
+export interface IButton { label: String, styleBtn: String, onClick?: () => void }
 export type ListStatus = {
     dataStatus: IStatusItem[],
 }

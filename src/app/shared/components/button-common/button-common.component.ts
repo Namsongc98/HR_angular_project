@@ -11,12 +11,16 @@ export class ButtonCommonComponent implements OnInit {
   @Input() btnData: IButton = {
     label: '',
     styleBtn: '',
-    onClick: () => { }
   }
   constructor() { }
 
   ngOnInit(): void {
     
+  }
+  handleClick() {
+    if (this.btnData?.onClick) {
+      this.btnData.onClick();
+    }
   }
 
 }

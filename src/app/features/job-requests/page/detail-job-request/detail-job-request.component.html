@@ -1,2 +1,108 @@
-<p>detail-job-request works!</p>
-<!-- <app-title-page></app-title-page> -->
+<div>
+  <div class="row justify-space-between align-center mb-24">
+    <app-title-page
+      [title]="'Applicants management'"
+      [backRouter]="true"
+    ></app-title-page>
+
+    <div class="row wrapper_button">
+      <app-button-common [btnData]="btnNewJob"></app-button-common>
+    </div>
+  </div>
+  <div class="paper-bg w-full p-16">
+    <h1 class="mb-16 font-lg">Job information</h1>
+    <div class="">
+      <div class="row gap-08 gap-bottom-08">
+        <div class="col-xl-6 row gap-08">
+          <p class="text-prop text-gray-prop">Department:</p>
+          <p>{{ inforJob.department }}</p>
+        </div>
+        <div class="col-xl-6 row gap-08">
+          <p class="text-prop text-gray-prop">Number of vacancies:</p>
+          <p>{{ inforJob.number_of_vacancies }}</p>
+        </div>
+        <div class="col-xl-6 row gap-08">
+          <p class="text-prop text-gray-prop">Building number:</p>
+          <p>{{ inforJob.building }}</p>
+        </div>
+        <div class="col-xl-6 row gap-08">
+          <p class="text-prop text-gray-prop">Start date:</p>
+          <p>{{ inforJob.start_date }}</p>
+        </div>
+        <div class="col-xl-6 row gap-08">
+          <p class="text-prop text-gray-prop">Requester:</p>
+          <p>{{ inforJob.requester }}</p>
+        </div>
+        <div class="col-xl-6 row gap-08">
+          <p class="text-prop text-gray-prop">End date:</p>
+          <p>{{ inforJob.end_date }}</p>
+        </div>
+        <div class="col-xl-6 row gap-08">
+          <p class="text-prop text-gray-prop">Skills:</p>
+          <p>{{ inforJob.skills }}</p>
+        </div>
+        <div class="col-xl-6 row gap-08">
+          <p class="text-prop text-gray-prop">Status:</p>
+          <p>{{ inforJob.status }}</p>
+        </div>
+        <div class="col-xl-6 row gap-08">
+          <p class="text-prop text-gray-prop">Level:</p>
+          <p>{{ inforJob.level }}</p>
+        </div>
+        <div class="col-xl-12">
+          <p class="text-prop text-gray-prop mb-08">Job description:</p>
+          <p>
+            {{ inforJob.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-24">
+    <h1 class="">Applicants</h1>
+    <div class="row align-center mt-08">
+      <app-list-status
+        [listStatus]="listStatus"
+        (onSelect)="handleSelectListStatus($event)"
+      ></app-list-status>
+    </div>
+  </div>
+  <div class="display-flex flex-column gap-flex-08 mt-16">
+    <div class="paper-bg pt-12 pb-12 pl-16 pr-16 row" *ngFor=" let item of dataCV">
+      <div class="col-xl-8">
+        <h1 class="">
+          <span class="font-md font-600"> {{item.nameUser}}</span>
+          <span
+                class='font-md font-400 ml-16  display-inline-block'
+                [ngClass]="CONSTANTS_STATUS_CV[item.status] || ''"
+              >{{item.status}}</span>
+        </h1>
+        <div class="row gap-08">
+          <p class="title-infor text-prop">Date of Birth:</p>
+          <p>{{item.DateBirth}}</p>
+        </div>
+        <div class="row gap-08">
+          <p class="title-infor text-prop">Work experience:</p>
+          <p>{{item.WorkExperience}}</p>
+        </div>
+        <div class="row gap-08">
+          <p class="title-infor text-prop">CV:</p>
+          <p class="text-purple">{{item.CV}}</p>
+        </div>
+      </div>
+      <div
+        class="col-xl-4 display-flex flex-column justify-space-between align-flex-end"
+      >
+        <div class="display-flex gap-flex-08">
+            <ng-container *ngIf="STATUS_CV_NEXT[item.status]">
+                <app-button-common *ngFor="let btn of STATUS_CV_NEXT[item.status]" [btnData]="btn" ></app-button-common>
+            </ng-container>
+        </div>
+        <p class="text-gray mt-24">
+          Applied at
+          <span class="text-gray mt-24">{{item.AppliedAt}}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

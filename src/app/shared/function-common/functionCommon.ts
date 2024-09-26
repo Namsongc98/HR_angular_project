@@ -1,4 +1,4 @@
-import { IColumn, ICompobox, IDataTable, IStatus, IStatusItem } from "src/app/module/components/components.type";
+import { IButton, IColumn, ICompobox, IDataTable, IStatus, IStatusItem } from "src/app/module/components/components.type";
 
 export const getAllHoursInDay = () => {
   const hoursArray = [];
@@ -56,7 +56,7 @@ export const createTextareaInput = (label: string,
     value,
 
   });
-export const btnInput = (label: string, styleBtn: string, onClick: () => void) => ({ label, styleBtn, onClick });
+export const btnInput: (label: string, styleBtn: string, onClick?: () => void) => IButton = (label: string, styleBtn: string, onClick: (() => void) | undefined) => ({ label, styleBtn, onClick });
 
 // export const modalProp = (open, title, onClick) => ({ open, title, onClick });
 export const tableInput = (columns: IColumn[], data: any[]) => ({ columns, data });
