@@ -8,7 +8,6 @@ import { tableInput } from 'src/app/shared/function-common/functionCommon';
 @Component({
   selector: 'app-applicants',
   templateUrl: './applicants.component.html',
-  styleUrls: ['./applicants.component.scss']
 })
 export class ApplicantsComponent implements OnInit {
   listStatus: IStatusApplicant[] = LIST_STATUS_APPLICANTS

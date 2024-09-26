@@ -7,6 +7,7 @@ import { SharedProfileModule } from '../../component/share-profile.module';
 
 
 
+
 @NgModule({
   declarations: [DetailApplicantComponent],
   imports: [

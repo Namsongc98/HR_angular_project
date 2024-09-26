@@ -31,34 +31,20 @@
                     <div class="display-flex">
                         <span class="title_item">Evaluation:</span>
                         <div class="display-flex flex-column">
-                            <div class="title_item">
-                                <span class="evaluation-item_title">Appearance:</span>
-                                <span class="font-600 font-md">Good</span>
-                            </div>
-                            <div class="title_item">
-                                <span class="evaluation-item_title">Manne:</span>
-                                <span class="font-600 font-md">Good</span>
-                            </div>
-                            <div class="title_item">
-                                <span class="evaluation-item_title">Personality:</span>
-                                <span class="font-600 font-md">Merit</span>
-                            </div>
-                            <div class="title_item">
-                                <span class="evaluation-item_title">Knowledge/Skills:</span>
-                                <span class="font-600 font-md">Good</span>
-                            </div>
-                            <div class="title_item">
-                                <span class="evaluation-item_title">Experienc:</span>
-                                <span class="font-600 font-md">Good</span>
-                            </div>
-                            <div class="title_item">
-                                <span class="evaluation-item_title">Communication:</span>
-                                <span class="font-600 font-md">Avg</span>
-                            </div>
-                            <div class="title_item">
-                                <span class="evaluation-item_title">Language:</span>
-                                <span class="font-600 font-md">Poor</span>
-                            </div>
+                            <ng-container [ngTemplateOutlet]="evaluation"
+                                [ngTemplateOutletContext]="{ label: 'Appearance', evaluation: 'Good' }"></ng-container>
+                            <ng-container [ngTemplateOutlet]="evaluation"
+                                [ngTemplateOutletContext]="{ label: 'Manne', evaluation: 'Good' }"></ng-container>
+                            <ng-container [ngTemplateOutlet]="evaluation"
+                                [ngTemplateOutletContext]="{ label: 'Personality', evaluation: 'Merit' }"></ng-container>
+                            <ng-container [ngTemplateOutlet]="evaluation"
+                                [ngTemplateOutletContext]="{ label: 'Knowledge/Skills', evaluation: 'Good' }"></ng-container>
+                            <ng-container [ngTemplateOutlet]="evaluation"
+                                [ngTemplateOutletContext]="{ label: 'Experienc', evaluation: 'Good' }"></ng-container>
+                            <ng-container [ngTemplateOutlet]="evaluation"
+                                [ngTemplateOutletContext]="{ label: 'Communication', evaluation: 'Good' }"></ng-container>
+                            <ng-container [ngTemplateOutlet]="evaluation"
+                                [ngTemplateOutletContext]="{ label: 'Language', evaluation: 'Poor' }"></ng-container>
                         </div>
                     </div>
                     <div class="">
@@ -88,3 +74,9 @@
         </div>
     </div>
 </div>
+<ng-template #evaluation let-label="label" let-evaluation="evaluation">
+    <div class="title_item">
+        <span class="evaluation-item_title">{{label}}:</span>
+        <span class="font-600 font-md">{{evaluation}}</span>
+    </div>
+</ng-template>
