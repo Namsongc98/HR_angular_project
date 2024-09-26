@@ -68,39 +68,48 @@
     </div>
   </div>
   <div class="display-flex flex-column gap-flex-08 mt-16">
-    <div class="paper-bg pt-12 pb-12 pl-16 pr-16 row" *ngFor=" let item of dataCV">
+    <div
+      class="paper-bg pt-12 pb-12 pl-16 pr-16 row"
+      *ngFor="let item of dataCV"
+    >
       <div class="col-xl-8">
         <h1 class="">
-          <span class="font-md font-600"> {{item.nameUser}}</span>
+          <span class="font-md font-600"> {{ item.nameUser }}</span>
           <span
-                class='font-md font-400 ml-16  display-inline-block'
-                [ngClass]="CONSTANTS_STATUS_CV[item.status] || ''"
-              >{{item.status}}</span>
+            class="font-md font-400 ml-16 display-inline-block"
+            [ngClass]="CONSTANTS_STATUS_CV[item.status] || ''"
+            >{{ item.status }}</span
+          >
         </h1>
         <div class="row gap-08">
           <p class="title-infor text-prop">Date of Birth:</p>
-          <p>{{item.DateBirth}}</p>
+          <p>{{ item.DateBirth }}</p>
         </div>
         <div class="row gap-08">
           <p class="title-infor text-prop">Work experience:</p>
-          <p>{{item.WorkExperience}}</p>
+          <p>{{ item.WorkExperience }}</p>
         </div>
         <div class="row gap-08">
           <p class="title-infor text-prop">CV:</p>
-          <p class="text-purple">{{item.CV}}</p>
+          <p class="text-purple">{{ item.CV }}</p>
         </div>
       </div>
       <div
         class="col-xl-4 display-flex flex-column justify-space-between align-flex-end"
       >
         <div class="display-flex gap-flex-08">
+          <ng-container *ngIf="labelBtn === 'Close'">
             <ng-container *ngIf="STATUS_CV_NEXT[item.status]">
-                <app-button-common *ngFor="let btn of STATUS_CV_NEXT[item.status]" [btnData]="btn" ></app-button-common>
+              <app-button-common
+                *ngFor="let btn of STATUS_CV_NEXT[item.status]"
+                [btnData]="btn"
+              ></app-button-common>
             </ng-container>
+          </ng-container>
         </div>
         <p class="text-gray mt-24">
           Applied at
-          <span class="text-gray mt-24">{{item.AppliedAt}}</span>
+          <span class="text-gray mt-24">{{ item.AppliedAt }}</span>
         </p>
       </div>
     </div>

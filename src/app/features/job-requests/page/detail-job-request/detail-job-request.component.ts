@@ -10,7 +10,7 @@ import { btnInput } from 'src/app/shared/function-common/functionCommon';
 })
 export class DetailJobRequestComponent implements OnInit {
   labelBtn: string = 'Close';
-  btnNewJob = btnInput(this.labelBtn, 'btn-blue', this.handleClickNewJob);
+  btnNewJob = btnInput(this.labelBtn, 'btn-blue',()=> this.handleClickNewJob());
   inforJob = JOB_INFOR;
   listStatus: IStatusApplicant[] = STATUS_JOB_CV;
   CONSTANTS_STATUS_CV = CONSTANTS_STATUS_CV;
@@ -22,19 +22,19 @@ export class DetailJobRequestComponent implements OnInit {
 
   ngOnInit(): void {
     for (const key of Object.keys(this.STATUS_CV_NEXT)) {
-      console.log(key, this.STATUS_CV_NEXT[key]);
       this.STATUS_CV_NEXT[key].forEach((item)=>{
-        item!.onClick = this.handleClickItemStatus
+        if (item) {
+          item.onClick =  this.handleClickItemStatus;
+        }
       })
     }
   }
 
   handleClickNewJob() {
-    console.log("handleClickNewJob");
+    this.labelBtn = 'Open';
+    this.btnNewJob = btnInput(this.labelBtn, 'btn-blue',()=> this.handleClickNewJob());
   }
   handleSelectListStatus(itemClick: any) {
-    console.log(DATA_CV);
-    console.log(this.listStatus);
     const filterData = DATA_CV.filter((item) => {
       if (itemClick.status === "All")
         return true
@@ -43,6 +43,6 @@ export class DetailJobRequestComponent implements OnInit {
     this.dataCV = filterData
   }
   handleClickItemStatus(){
-
+    console.log("object");
   }
 }
