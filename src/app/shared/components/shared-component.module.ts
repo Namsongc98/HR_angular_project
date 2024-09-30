@@ -1,3 +1,4 @@
+import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TitlePageComponent } from './title-page/title-page.component';
@@ -22,7 +23,8 @@ import { ModalConfirmComponent } from './modal-confirm/modal-confirm.component';
     FormsModule,
     NzSelectModule,
     NzTableModule,
-    NzDatePickerModule
+    NzDatePickerModule,
+    NzModalModule
   ],
   exports: [TitlePageComponent, ButtonCommonComponent, ListStatusComponent, CompoboxCommonComponent, TableCommonComponent, InputCommonComponent, TextareaCommonComponent, DatePickCommonComponent,ModalConfirmComponent]
 })

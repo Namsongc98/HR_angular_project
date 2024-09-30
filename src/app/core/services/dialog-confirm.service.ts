@@ -9,23 +9,23 @@ import { IDialogConfirm } from 'src/app/module/interface/common';
 export class DialogConfirmService {
 
   // Khởi tạo state với BehaviorSubject để có thể phát đi các giá trị mới
-  private dialogSubject: BehaviorSubject<IDialogConfirm> = new BehaviorSubject<IDialogConfirm>({ isVisible: false, title: '', content: '', footer: [] });
+  private _dialogSubject: BehaviorSubject<IDialogConfirm> = new BehaviorSubject<IDialogConfirm>({ isVisible: false, title: '', content: '', footer: [] });
 
   // Lấy state dưới dạng Observable
-  public users$: Observable<IDialogConfirm> = this.dialogSubject.asObservable();
+  public dialog$: Observable<IDialogConfirm> = this._dialogSubject.asObservable();
 
   constructor() { }
 
-  getDialog(): IDialogConfirm {
-    return this.dialogSubject.value;
+  getDialog() {
+    return this._dialogSubject.asObservable();
   }
 
-  addDialog(user: IDialogConfirm): void {
-    const currentUsers = this.dialogSubject.value;
-    this.dialogSubject.next(currentUsers); // Cập nhật state với người dùng mới
+  setDialog(dialog: IDialogConfirm) {
+    this._dialogSubject.next(dialog);
   }
 
-  closeDialog(): void {
-    this.dialogSubject.next({ isVisible: false, title: '', content: '', footer: [] }); // Reset danh sách người dùng
+  closeDialog() {
+    const currentDialog = this._dialogSubject.getValue();
+    this._dialogSubject.next({ ...currentDialog, isVisible: false });
   }
 }
