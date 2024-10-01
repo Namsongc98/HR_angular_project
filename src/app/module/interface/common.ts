@@ -4,5 +4,6 @@ export interface IDialogConfirm {
     isVisible: boolean,
     title: string,
     content: string,
+    body:'',
     footer: IButton[],
   }

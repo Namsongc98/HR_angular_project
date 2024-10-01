@@ -9,7 +9,7 @@ import { IDialogConfirm } from 'src/app/module/interface/common';
 export class DialogConfirmService {
 
   // Khởi tạo state với BehaviorSubject để có thể phát đi các giá trị mới
-  private _dialogSubject: BehaviorSubject<IDialogConfirm> = new BehaviorSubject<IDialogConfirm>({ isVisible: false, title: '', content: '', footer: [] });
+  private _dialogSubject: BehaviorSubject<IDialogConfirm> = new BehaviorSubject<IDialogConfirm>({ isVisible: false, title: '', content: '', body: '', footer: [] });
 
   // Lấy state dưới dạng Observable
   public dialog$: Observable<IDialogConfirm> = this._dialogSubject.asObservable();
@@ -21,7 +21,7 @@ export class DialogConfirmService {
   }
 
   setDialog(dialog: IDialogConfirm) {
-    this._dialogSubject.next(dialog);
+    this._dialogSubject.next(dialog); 
   }
 
   closeDialog() {

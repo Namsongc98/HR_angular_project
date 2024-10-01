@@ -10,6 +10,8 @@ import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
 import { SharedComponentModule } from './shared/components/shared-component.module';
+
+
 registerLocaleData(zh);
 
 @NgModule({

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DialogConfirmService } from 'src/app/core/services/dialog-confirm.service';
+import { IDatePick } from 'src/app/module/components/components.type';
 import { IDialogConfirm } from 'src/app/module/interface/common';
-import { btnInput } from 'src/app/shared/function-common/functionCommon';
+import { btnInput, createDateInput } from 'src/app/shared/function-common/functionCommon';
 
 @Component({
   selector: 'app-detail-applicant',
@@ -26,16 +27,16 @@ export class DetailApplicantComponent implements OnInit {
   }
 
   handleClickReject() {
-    this.dialogService.setDialog({ isVisible: true, title: 'Are you sure to reject this candidate?', content: '', footer: [this.btnRejectConfirmNo, this.btnRejectConfirmYes] })
+    this.dialogService.setDialog({ isVisible: true, title: 'Are you sure to reject this candidate?', content: '', body: '', footer: [this.btnRejectConfirmNo, this.btnRejectConfirmYes] })
   }
   handleClickSchedule() {
-
+    this.dialogService.setDialog({ isVisible: true, title: 'Schedule Round 1', content: '', body: '', footer: [] })
   }
   handleClickConfirmNo() {
     this.dialogService.closeDialog()
   }
   handleClickConfirmYes() {
-    console.log("no")
+    this.dialogService.closeDialog()
   }
 
 }
