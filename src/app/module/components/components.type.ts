@@ -19,7 +19,7 @@ export interface IStatusApplicant extends IStatusItem {
 export interface ICompobox {
     id: number;
     label: string;
-    value: string;
+    value: string | number;
 }
 
 export interface IInputCompobox {

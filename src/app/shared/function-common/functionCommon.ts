@@ -3,14 +3,14 @@ import { IButton, IColumn, ICompobox, IDataTable, IStatus, IStatusItem } from "s
 export const getAllHoursInDay = () => {
   const hoursArray = [];
   for (let hour = 0; hour < 24; hour++) {
-    hoursArray.push({ id: hour, label: hour, value: hour });
+    hoursArray.push({ id: hour, label: String(hour), value: hour });
   }
   return hoursArray;
 };
 export const getAllMinutesInHour = () => {
   const minutesArray = [];
   for (let minute = 0; minute < 60; minute++) {
-    minutesArray.push({ id: minute, label: minute, value: minute });
+    minutesArray.push({ id: minute, label: String(minute), value: minute });
   }
   return minutesArray;
 };

@@ -21,3 +21,10 @@ export type InterviewerStatus =
     | 'Pass Round 2'
     | 'Scheduled round 2'
     | 'Fail';
+
+ export   interface IInterViewForm {
+        interviewer: string;
+        interviewerDate: string;
+        hour: string;
+        minute: string;
+      }

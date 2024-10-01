@@ -16,7 +16,6 @@ export class ModalConfirmComponent implements OnInit {
     footer: [],
   }
   dialogSubscription!: Subscription;
-  @ContentChild('formDetailApplicant') formDetailApplicant!: ElementRef;
   constructor(private dialogService: DialogConfirmService) { }
   ngOnInit() {
     this.dialogSubscription = this.dialogService.getDialog().subscribe((dialog: IDialogConfirm) => {
@@ -24,7 +23,7 @@ export class ModalConfirmComponent implements OnInit {
     })
   }
   ngAfterContentInit() {
-    console.log(this.formDetailApplicant.nativeElement.textContent);
+
   }
   handleCancel() {
     this.dialogService.closeDialog()
