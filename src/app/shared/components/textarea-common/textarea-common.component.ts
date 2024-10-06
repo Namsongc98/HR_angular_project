@@ -4,7 +4,6 @@ import { IInputTag, ITextareaTag } from 'src/app/module/components/components.ty
 @Component({
   selector: 'app-textarea-common',
   templateUrl: './textarea-common.component.html',
-  styleUrls: ['./textarea-common.component.scss']
 })
 export class TextareaCommonComponent implements OnInit {
   @Input() dataInputTextarea: ITextareaTag = {

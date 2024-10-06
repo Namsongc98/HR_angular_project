@@ -1,4 +1,5 @@
-import { ICompobox } from "src/app/module/components/components.type";
+import { IButton, ICompobox } from "src/app/module/components/components.type";
+import { InterviewerStatus } from "src/app/module/interface/interview";
 
 export const LIST_STATUS_JOB_REQUEST = [
   {
@@ -231,7 +232,7 @@ export const COLUMNS_JOB_REQUEST = [
   },
 ];
 
-export const CONSTANTS_STATUS_CV = {
+export const CONSTANTS_STATUS_CV :  { [key in InterviewerStatus]: string } | any  = {
   New: "text-blue",
   "Waiting for Round 1": "text-orange",
   "Completed Round 1": "text-green",
@@ -429,16 +430,21 @@ export const DATA_CV = [
   },
 ];
 
+export type IStatusNext = {
+ [key: string]: Array< IButton>,
+}
+
+
 export const STATUS_CV_NEXT =
 {
   New: [
     {
-      id: "reject",
+      // id: "reject",
       label: 'Reject',
       styleBtn: "text-red btn-gray",
     },
     {
-      id: "nex",
+      // id: "nex",
       styleBtn: "btn-blue",
       label: "Schedule Round 1",
     }
@@ -448,12 +454,12 @@ export const STATUS_CV_NEXT =
   "Pass Round 1":
     [
       {
-        id: "nex",
+        // id: "nex",
         styleBtn: "btn-gray",
         label: "Schedule Round 2",
       },
       {
-        id: "approve",
+        // id: "approve",
         styleBtn: "btn-blue",
         label: "Approve",
       }
@@ -461,38 +467,39 @@ export const STATUS_CV_NEXT =
   'Scheduled round 2': [],
   "Pass Round 2": [
     {
-      id: "approve",
+      // id: "approve",
       styleBtn: "btn-blue",
       label: "Approve",
     }
   ],
   "Approved": [
     {
-      id: "onboard",
+      // id: "onboard",
       styleBtn: "btn-blue",
       label: "Onboard",
     }
   ],
   Rejected: [
     {
-      id: "nex",
+      // id: "nex",
       styleBtn: "btn-blue",
       label: "Schedule Round 2",
     }
   ],
   Fail: [
     {
-      id: "nex",
+      // id: "nex",
       styleBtn: "btn-gray",
       label: "Schedule Round 1",
     },
     {
-      id: "rejected",
+      // id: "rejected",
       styleBtn: "btn-blue",
       label: "Reject",
     }
   ],
 }
+
 
 
 export const STATUS_JOB_CV = [

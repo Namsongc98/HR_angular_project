@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { IButton, IInputCompobox, IInputTag, ITextareaTag } from 'src/app/module/components/components.type';
+import { IButton, IDatePick, IInputCompobox, IInputTag, ITextareaTag } from 'src/app/module/components/components.type';
 import { IJob } from 'src/app/module/interface/job.interface';
-import { CONSTANTS_DEPARTMENT, CONSTANTS_LEVEL } from 'src/app/shared/constant/constant';
-import { btnInput, createComboBoxProps, createInputTextInput, createTextareaInput } from 'src/app/shared/function-common/functionCommon';
+import { CONSTANTS_DEPARTMENT, CONSTANTS_LEVEL } from 'src/app/shared/constant/constant-page/job-request/constant';
+
+import { btnInput, createComboBoxProps, createDateInput, createInputTextInput, createTextareaInput } from 'src/app/shared/function-common/functionCommon';
 
 @Component({
   selector: 'app-create-job-request',
   templateUrl: './create-job-request.component.html',
-  styleUrls: ['./create-job-request.component.scss']
 })
 export class CreateJobRequestComponent implements OnInit {
 
@@ -32,6 +32,8 @@ export class CreateJobRequestComponent implements OnInit {
   inputVacancies: IInputTag = createInputTextInput("Number of vacancies", 'Enter number', 'number', this.dataCreateJob.number_of_vacancies, 'number_of_vacancies')
   inputInterviews: IInputTag = createInputTextInput("Number of interviews", 'Enter number', 'number', this.dataCreateJob.number_of_interviews, 'number_of_interviews')
   textareaJobDescription: ITextareaTag = createTextareaInput("Job description", 'Enter job description', '5', '50', 'description', this.dataCreateJob.description,)
+  dateStart: IDatePick = createDateInput("Start date", this.dataCreateJob.start_date, '', 'start_date', 'Select start date', 'date')
+  dateEnd: IDatePick = createDateInput("End date", this.dataCreateJob.end_date, '', 'end_date', 'Select end date', 'date')
 
 
   constructor() { }

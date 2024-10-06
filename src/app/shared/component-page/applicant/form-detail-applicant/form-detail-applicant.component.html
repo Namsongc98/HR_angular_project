@@ -1,0 +1,32 @@
+<div>
+  <app-compobox-common
+    [inputCompobox]="compoboxInterviewer"
+    (onChange)="handleChange($event, 'interviewer')"
+  ></app-compobox-common>
+  <div class="row gap-08">
+    <div class="col-xl-6">
+      <app-date-pick-common
+        [dataInput]="dateStart"
+        (onChange)="handleChange($event, 'interviewerDate')"
+      ></app-date-pick-common>
+    </div>
+    <div class="col-xl-3">
+      <div class="label-body"></div>
+      <app-compobox-common
+        [inputCompobox]="hourInterviewer"
+        (onChange)="handleChange($event, 'hour')"
+      ></app-compobox-common>
+    </div>
+    <div class="col-xl-3">
+      <div class="label-body"></div>
+      <app-compobox-common
+        [inputCompobox]="minuteInterviewer"
+        (onChange)="handleChange($event, 'minute')"
+      ></app-compobox-common>
+    </div>
+  </div>
+</div>
+<div class="display-flex gap-flex-08 justify-flex-end mt-32">
+  <app-button-common [btnData]="btnCancel"></app-button-common>
+  <app-button-common [btnData]="btnSubmit"></app-button-common>
+</div>

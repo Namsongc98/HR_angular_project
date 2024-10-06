@@ -1,17 +1,25 @@
-export interface IButton { label: String, styleBtn: String, onClick: () => void }
+export interface IButton { label: String, styleBtn: String, onClick?: (event: MouseEvent) => void }
 export type ListStatus = {
-    dataStatus: IStatusJobRequest[],
+    dataStatus: IStatusItem[],
 }
 
-export interface IStatusJobRequest {
-    id: Number,
-    status: String
+export interface IStatusItem {
+    id: number,
+    status: string,
+    counter?: number
 }
+export interface IStatusApplicant extends IStatusItem {
+    id: number,
+    status: string,
+    counter: number
+}
+
+
 
 export interface ICompobox {
     id: number;
     label: string;
-    value: string;
+    value: string | number;
 }
 
 export interface IInputCompobox {
@@ -46,6 +54,13 @@ export interface IDataJobRequest {
     status: string;
     actions: string;
 }
+export interface IDataApplicant {
+    key: number;
+    candidate_name: string;
+    job_title: string;
+    applied_at: string;
+    status: string;
+}
 
 export interface IStatus {
     [key: string]: string
@@ -65,4 +80,19 @@ export interface ITextareaTag {
     cols: string;
     name: string;
     value: string;
+}
+export interface IDatePick {
+    label: string; value: string; defaultValue: string; name: string; placeholder: string; type: string
+}
+export interface IDataNewApplicants {
+    key: number;
+    candidate_name: string;
+    job_title: string;
+    department: string;
+}
+export interface IDataOpenedJobs {
+    key: number;
+    job_title: string;
+    department: string;
+    applicant: number;
 }

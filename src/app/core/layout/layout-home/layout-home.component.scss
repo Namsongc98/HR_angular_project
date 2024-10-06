@@ -1,5 +1,6 @@
+@import 'src/styles';
 .ant-layout-header {
-  padding: 0 0 0 0;
+  padding: 0  !important;
   height: inherit;
 }
 .ant-layout-content{
@@ -18,12 +19,12 @@ nav {
         height: 100%;
         width: 100%;
         background-color: #f6e4f6;
-        border-right: 2px solid #8d308d;
-        color: #8d308d;
+        border-right: 2px solid $purple;
+        color: $purple;
       }
 
       a:hover {
-        color: #8d308d;
+        color: $purple;
         line-height: 46px;
       }
     }

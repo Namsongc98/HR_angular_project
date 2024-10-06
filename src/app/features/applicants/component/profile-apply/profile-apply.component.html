@@ -1,0 +1,219 @@
+<div class="w-full">
+    <div class="paper-bg p-12">
+        <div class="display-flex align-center justify-space-between">
+            <p class="font-xl text-black font-6">Candidate information</p>
+            <p class="font-md  font-4">
+                <span class="text-gray_text">Status:</span> <span class="text-blue">New</span>
+            </p>
+        </div>
+        <div class="">
+            <div class="pt-16">
+                <ng-container [ngTemplateOutlet]="itemProfile"> </ng-container>
+            </div>
+            <nz-divider></nz-divider>
+            <ng-container [ngTemplateOutlet]="itemProfile" [ngTemplateOutletContext]="{ title: 'Personal Particulars'}">
+            </ng-container>
+            <nz-divider></nz-divider>
+            <h4 class="mt-2 mb-2">Work experience (from the latest employment)</h4>
+            <div class="">
+                <ng-container [ngTemplateOutlet]="itemProfile" [ngTemplateOutletContext]="{ title: 'AAA Company'}">
+                </ng-container>
+                <ng-container [ngTemplateOutlet]="itemProfile" [ngTemplateOutletContext]="{ title: 'AAA Company'}">
+                </ng-container>
+                <ng-container [ngTemplateOutlet]="itemProfile" [ngTemplateOutletContext]="{ title: 'AAA Company'}">
+                </ng-container>
+            </div>
+            <nz-divider></nz-divider>
+            <h4 class="mt-2 mb-12">License / Permit obtained</h4>
+            <div class="">
+                <ng-container [ngTemplateOutlet]="itemPermitObtained"
+                    [ngTemplateOutletContext]="{ title: 'AAA Company'}"> </ng-container>
+                <ng-container [ngTemplateOutlet]="itemPermitObtained"
+                    [ngTemplateOutletContext]="{ title: 'AAA Company'}"> </ng-container>
+                <ng-container [ngTemplateOutlet]="itemPermitObtained"
+                    [ngTemplateOutletContext]="{ title: 'AAA Company'}"> </ng-container>
+            </div>
+            <nz-divider></nz-divider>
+            <h4 class="mt-2 mb-12">Education Background</h4>
+            <div class="">
+                <ng-container [ngTemplateOutlet]="itemEducation" [ngTemplateOutletContext]="{ title: 'AAA Company'}">
+                </ng-container>
+                <ng-container [ngTemplateOutlet]="itemEducation" [ngTemplateOutletContext]="{ title: 'AAA Company'}">
+                </ng-container>
+                <ng-container [ngTemplateOutlet]="itemEducation" [ngTemplateOutletContext]="{ title: 'AAA Company'}">
+                </ng-container>
+            </div>
+            <nz-divider></nz-divider>
+            <h4 class="mt-2 mb-12">Other Qualification Attained</h4>
+            <div class="">
+                <ng-container [ngTemplateOutlet]="itemEducation"
+                    [ngTemplateOutletContext]="{ title: 'AAA Company', reverse:'flex-row-reverse justify-flex-end'}">
+                </ng-container>
+                <ng-container [ngTemplateOutlet]="itemEducation"
+                    [ngTemplateOutletContext]="{ title: 'AAA Company', reverse:'flex-row-reverse justify-flex-end'}">
+                </ng-container>
+                <ng-container [ngTemplateOutlet]="itemEducation"
+                    [ngTemplateOutletContext]="{ title: 'AAA Company', reverse:'flex-row-reverse justify-flex-end'}">
+                </ng-container>
+            </div>
+            <nz-divider></nz-divider>
+            <h4 class="mt-2 mb-12">Other Qualification Attained</h4>
+            <div class="">
+                <ng-container [ngTemplateOutlet]="itemLanguages"
+                    [ngTemplateOutletContext]="{ title: 'AAA Company', reverse:'flex-row-reverse justify-flex-end'}">
+                </ng-container>
+                <ng-container [ngTemplateOutlet]="itemLanguages"
+                    [ngTemplateOutletContext]="{ title: 'AAA Company', reverse:'flex-row-reverse justify-flex-end'}">
+                </ng-container>
+                <ng-container [ngTemplateOutlet]="itemLanguages"
+                    [ngTemplateOutletContext]="{ title: 'AAA Company', reverse:'flex-row-reverse justify-flex-end'}">
+                </ng-container>
+            </div>
+            <nz-divider></nz-divider>
+            <h4 class="mt-2 mb-12">Skill</h4>
+            <div class="">
+                <ng-container [ngTemplateOutlet]="itemProfile" [ngTemplateOutletContext]="{ title: 'Computer'}">
+                </ng-container>
+                <ng-container [ngTemplateOutlet]="itemProfile" [ngTemplateOutletContext]="{ title: 'Mangement'}">
+                </ng-container>
+            </div>
+            <nz-divider></nz-divider>
+            <h4 class="mt-2 mb-12">Referees</h4>
+            <div class="">
+                <ng-container [ngTemplateOutlet]="itemProfile" [ngTemplateOutletContext]="{ title: 'Tom Hauster'}">
+                </ng-container>
+                <ng-container [ngTemplateOutlet]="itemProfile" [ngTemplateOutletContext]="{ title: 'Danniel'}">
+                </ng-container>
+            </div>
+            <nz-divider></nz-divider>
+            <h4 class="mt-2 mb-12">General Information</h4>
+            <div class="pt-08 pb8">
+                <div class="pt-08 pb8">
+                    <h4 class="mb-04 font-7 font-lg">
+                        Please state your channel of application
+                    </h4>
+                    <p>Staff Referral</p>
+                </div>
+                <div class="pt-08 pb8">
+                    <h4 class="mb-04 font-7 font-lg">
+                        Are you our ex-employee? If yes, please state your position and
+                        service period
+                    </h4>
+                    <p>No</p>
+                </div>
+                <div class="pt-08 pb8">
+                    <h4 class="mb-04 font-7 font-lg">
+                        Have you ever been found guilty of any offence in a court of law
+                        in Hong Kong or other place? If yes, please state details.
+                    </h4>
+                    <p>No</p>
+                </div>
+                <div class="pt-08 pb8">
+                    <h4 class="mb-04 font-7 font-lg">
+                        Have you ever been found guilty of any offence in a court of law
+                        in Hong Kong or other place? If yes, please state details.
+                    </h4>
+                    <p>No</p>
+                </div>
+                <div class="pt-08 pb8">
+                    <h4 class="mb-04 font-7 font-lg">I confirm and agree that:</h4>
+                    <ol type="1" class="pl-08">
+                        <li>
+                            1.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                            eget sem ut elit euismod dignissim et nec lacus.
+                        </li>
+                        <li>
+                            2.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                            eget sem ut elit euismod dignissim et nec lacus.
+                        </li>
+                        <li>
+                            3.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                            eget sem ut elit euismod dignissim et nec lacus.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #itemProfile let-title="title">
+    <div class="pt-08 pb-08">
+        <h1 class="font-7 font-lg">{{title}}</h1>
+        <div class="display-flex flex-column gap-flex-0_4">
+            <div class="display-flex align-center">
+                <span class="title_item text-gray_text">Job title:</span>
+                <span>Web App Developer (PHP/C#/.Net/JavaScript)</span>
+            </div>
+            <div class="display-flex align-center">
+                <span class="title_item text-gray_text">Date available:</span>
+                <span>08/08/2024</span>
+            </div>
+            <div class="display-flex align-center">
+                <span class="title_item text-gray_text">Salary expected:</span>
+                <span>$2000</span>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template #itemPermitObtained let-title="title">
+    <div class="pt-0_8 pb-0_8">
+        <h1 class="font-7 font-lg">{{title}}</h1>
+        <div class="row gap-flex-85">
+            <div class="">
+                <span class="text-gray_text mr-0_8">Category:</span>
+                <span>---</span>
+            </div>
+            <div class="">
+                <span class="text-gray_text mr-0_8">Issue date:</span>
+                <span>01/02/2020</span>
+            </div>
+            <div class="">
+                <span class="text-gray_text mr-0_8">Exp. date:</span>
+                <span>01/02/2020</span>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template #itemEducation let-title="title" let-reverse="reverse">
+    <div class="pt-0_8 pb-0_8">
+        <h1 class="font-7 font-lg">
+            AAA Company <span class="font-6 font-md">(Tertiary school)</span>
+        </h1>
+        <div [ngClass]="['display-flex  gap-flex-60',  reverse ? reverse : '']">
+            <div class="row">
+                <div class="mr-0_8 font-4">
+                    <span class="text-gray_text mr-0_8">From</span>
+                    <span>01/02/2020</span>
+                </div>
+                <div class="">
+                    <span class="text-gray_text mr-0_8">To</span>
+                    <span>01/02/2020</span>
+                </div>
+            </div>
+            <div class="">
+                <span class="text-gray_text mr-0_8">Major subject & Level attained:</span>
+                <span>Biology</span>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template #itemLanguages let-title="title" let-reverse="reverse">
+    <div class="pt-0_8 pb-0_8">
+        <h1 class="font-7 font-lg">English</h1>
+        <div class="row gap-flex-60">
+            <div class="">
+                <span class="text-gray_text mr-0_8">Reading:</span>
+                <span>Good</span>
+            </div>
+            <div class="">
+                <span class="text-gray_text mr-0_8">Spoken:</span>
+                <span>Good</span>
+            </div>
+            <div class="">
+                <span class="text-gray_text mr-0_8">Written:</span>
+                <span>Excellent</span>
+            </div>
+        </div>
+    </div>
+</ng-template>

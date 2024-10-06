@@ -11,8 +11,7 @@
     font-size: 17px;
   }
 
-  .ant-picker-outlined {
-    // padding: 8px 12px 9px 12px !important;
+  nz-date-picker {
     border: 2px solid $border_color;
     width: 100%;
     flex-direction: row-reverse;
@@ -31,7 +30,7 @@
     }
 
     .ant-picker-suffix {
-      padding: 10px 15px 10px 15px;
+      padding: 10px 10px 10px 10px;
       background-color: #0078d4;
 
       .anticon-calendar {
@@ -41,8 +40,9 @@
     }
 
     .ant-picker-clear {
-      padding: 10px;
-
+      padding: 9px;
+      background-color: #0078d4;
+      color: white;
       .anticon-close-circle {
         font-size: 24px;
       }
@@ -83,7 +83,7 @@
     }
 
     .ant-picker-suffix {
-      padding: 10px 15px 10px 15px;
+      padding: 10px 10px 10px 10px;
       background-color: white;
     }
 

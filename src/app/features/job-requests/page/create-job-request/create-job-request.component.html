@@ -1,7 +1,10 @@
 <div class="">
   <div class="row justify-space-between align-center">
     <div class="row align-center">
-      <app-title-page [title]="'Create new Job requests'" [backRouter]="true"></app-title-page>
+      <app-title-page
+        [title]="'Create new Job requests'"
+        [backRouter]="true"
+      ></app-title-page>
     </div>
     <div class="row wrapper_button gap-flex-08">
       <app-button-common [btnData]="btnCancel"></app-button-common>
@@ -12,47 +15,66 @@
     <div class="w-full row flex-column gap-flex-08">
       <div class="row gap-16">
         <div class="col-xl-6">
-          <app-input-common [dataInput]="inputJobTitle"
-            (onModelChange)="handleChange($event, 'job_title')"></app-input-common>
+          <app-input-common
+            [dataInput]="inputJobTitle"
+            (onModelChange)="handleChange($event, 'job_title')"
+          ></app-input-common>
         </div>
         <div class="col-xl-6">
-          <app-compobox-common [inputCompobox]="compoboxDepartment"
-            (onChange)="handleChange($event, 'department')"></app-compobox-common>
-        </div>
-      </div>
-      <div class="row gap-16">
-        <div class="col-xl-6">
-          <app-input-common [dataInput]="inputSkills"
-            (onModelChange)="handleChange($event, 'skills')"></app-input-common>
-        </div>
-        <div class="col-xl-6">
-          <app-compobox-common [inputCompobox]="comboboxLever"
-            (onChange)="handleChange($event, 'level')"></app-compobox-common>
+          <app-compobox-common
+            [inputCompobox]="compoboxDepartment"
+            (onChange)="handleChange($event, 'department')"
+          ></app-compobox-common>
         </div>
       </div>
       <div class="row gap-16">
         <div class="col-xl-6">
-          <!-- <DatePickComponent dateDta={dateStart} /> -->
+          <app-input-common
+            [dataInput]="inputSkills"
+            (onModelChange)="handleChange($event, 'skills')"
+          ></app-input-common>
         </div>
         <div class="col-xl-6">
-          <!-- <DatePickComponent dateDta={dateEnd} /> -->
+          <app-compobox-common
+            [inputCompobox]="comboboxLever"
+            (onChange)="handleChange($event, 'level')"
+          ></app-compobox-common>
         </div>
       </div>
       <div class="row gap-16">
         <div class="col-xl-6">
-          <app-input-common [dataInput]="inputVacancies"
-            (onModelChange)="handleChange($event, 'number_of_vacancies')"></app-input-common>
+          <app-date-pick-common
+            [dataInput]="dateStart"
+            (onChange)="handleChange($event, 'start_date')"
+          ></app-date-pick-common>
         </div>
         <div class="col-xl-6">
-          <app-input-common [dataInput]="inputSkills"
-            (onModelChange)="handleChange($event, 'skills')"></app-input-common>
+          <app-date-pick-common
+            [dataInput]="dateEnd"
+            (onChange)="handleChange($event, 'end_date')"
+          ></app-date-pick-common>
+        </div>
+      </div>
+      <div class="row gap-16">
+        <div class="col-xl-6">
+          <app-input-common
+            [dataInput]="inputVacancies"
+            (onModelChange)="handleChange($event, 'number_of_vacancies')"
+          ></app-input-common>
+        </div>
+        <div class="col-xl-6">
+          <app-input-common
+            [dataInput]="inputInterviews"
+            (onModelChange)="handleChange($event, 'skills')"
+          ></app-input-common>
         </div>
       </div>
     </div>
     <div class="mt-16 wp-text_area">
-      <app-textarea-common [dataInputTextarea]="textareaJobDescription"
-        (onModelChange)="handleChange($event, 'description')"></app-textarea-common>
-      <!-- <TextareaComponent dataTextarea={textareaJobDescription} /> -->
+      <app-textarea-common
+        [dataInputTextarea]="textareaJobDescription"
+        (onModelChange)="handleChange($event, 'description')"
+      ></app-textarea-common>
     </div>
   </div>
 </div>
