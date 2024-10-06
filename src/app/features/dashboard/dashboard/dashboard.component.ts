@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CompletionObserver, ErrorObserver, NextObserver, Observable } from 'rxjs';
-import { finalize } from 'rxjs/operators';
+import { CompletionObserver, ErrorObserver, NextObserver, Observable, Subject } from 'rxjs';
+import { finalize, takeUntil } from 'rxjs/operators';
 import { DashboardService } from 'src/app/core/services/page/dashboard/dashboard.service';
 import { IColumn, IDataNewApplicants, IDataOpenedJobs, IInputTable } from 'src/app/module/components/components.type';
 import { COLUMN_TABLE__NEW_APPLICANTS, COLUMN_TABLE_OPENED_JOBS, CONSTANTS_STATUS_INTERVIEWER, dataInterview, dataNewApplicants, listNumber } from 'src/app/shared/constant/constant-page/dashboard/dashboard';
@@ -11,6 +11,8 @@ import { createDateInput, tableInput } from 'src/app/shared/function-common/func
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent implements OnInit {
+
+  private destroy$ = new Subject<void>();
 
   constructor(private _dashboardService: DashboardService) { }
 
@@ -50,7 +52,7 @@ export class DashboardComponent implements OnInit {
     this._dashboardService.getOpenedJobs().pipe(
       finalize(() => {
         this.isLoading = false;
-      })
+      }),
     ).subscribe({
       next: (value) => {
         this.dataTableOpened = tableInput(
@@ -89,5 +91,10 @@ export class DashboardComponent implements OnInit {
   handleChange(event: unknown, name: string) {
     console.log(event);
     console.log(name);
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }
