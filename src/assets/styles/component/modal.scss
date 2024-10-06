@@ -4,9 +4,27 @@
         border: 2px solid $border_color;
         padding: 32px;
 
+        .ant-modal-header {
+            border: none;
+        }
+
         .ant-modal-close {
             top: 32px;
             right: 32px;
+        }
+
+        .ant-modal-body {
+            padding: 12px !important;
+        }
+
+        .ant-modal-footer {
+            border: none;
+
+            .ng-star-inserted {
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+            }
         }
     }
 }

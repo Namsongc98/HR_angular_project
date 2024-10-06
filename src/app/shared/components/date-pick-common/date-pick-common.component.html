@@ -1,0 +1,8 @@
+<div class="container-date_pick w-full">
+  <label class="label">{{ dataInput.label }}</label>
+  <nz-date-picker
+    [(ngModel)]="dataInput.value"
+    [nzMode]="dataInput.type"
+    (ngModelChange)="handleChange.emit($event)"
+  ></nz-date-picker>
+</div>

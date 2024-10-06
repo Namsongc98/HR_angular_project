@@ -1,15 +1,10 @@
 <div class="row align-center justify-space-between mt-24 mb-16 gap-flex-24">
   <ng-container *ngIf="listStatus.length">
-    <button
-      class="font-600 cursor-pointer font-lg"
-      *ngFor="let item of listStatus"
-      [ngClass]="{
+    <button class="font-600 cursor-pointer font-lg" *ngFor="let item of listStatus" [ngClass]="{
         'text-purple': selectIdStatus === item.id,
         'text-gray': selectIdStatus !== item.id
-      }"
-      (click)="handleFilter(item)"
-    >
-      {{ item.status }}
+      }" (click)="handleFilter(item)">
+      {{ item.status }} <span *ngIf="item?.counter">( {{item.counter}} )</span>
     </button>
   </ng-container>
 </div>

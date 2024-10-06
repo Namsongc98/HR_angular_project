@@ -1,4 +1,51 @@
-nz-select {
-    margin: 0 8px 10px 0;
-    width: 120px;
+@import 'src/styles';
+
+
+.wp-combobox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .label {
+    display: block;
+    margin: 8px 0 9px 0;
+    color: #333;
+    font-size: 17px;
   }
+
+  .ant-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100% !important;
+    height: 40px;
+    background-color: #fff;
+    border: 2px solid $border_color;
+    cursor: pointer;
+    margin: 0 0 0 0 !important;
+
+    &:hover {
+      border: 2px solid $primary;
+    }
+
+    nz-select-top-control {
+      padding: 5px 0 6px 12px !important;
+      height: 36px !important;
+
+      .ant-select-selection-search-input {
+        color: #999;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.label-body {
+  height: 28px;
+}
+
+.container-combobox {
+  width: 25rem;
+}

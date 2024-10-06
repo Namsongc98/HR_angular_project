@@ -4,7 +4,6 @@ import {listNavRoutes} from '../../../shared/constant/routes-constant'
 @Component({
   selector: 'app-navigate-layout',
   templateUrl: './navigate-layout.component.html',
-  styleUrls: ['./navigate-layout.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class NavigateLayoutComponent implements OnInit {

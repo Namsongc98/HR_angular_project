@@ -1,0 +1,24 @@
+<nz-modal
+  [(nzVisible)]="dialog.isVisible"
+  [nzTitle]="dialog.title"
+  (nzOnCancel)="handleCancel()"
+>
+  <div *nzModalContent>
+    <ng-container *ngIf="dialog.content && dialog.content.trim() !== ''">
+      <p>{{ dialog.content }}</p>
+    </ng-container>
+    <ng-container *ngIf="dialog.body">
+      {{dialog.body}}
+      <!-- <app-form-detail-applicant>
+         <ng-content></ng-content>
+         <p #formDetailApplicant>Nội dung từ component cha</p> 
+      </app-form-detail-applicant> -->
+    </ng-container>
+  </div>
+  <div *nzModalFooter>
+    <app-button-common
+      *ngFor="let btn of dialog.footer"
+      [btnData]="btn"
+    ></app-button-common>
+  </div>
+</nz-modal>
