@@ -23,7 +23,7 @@ export class FormDetailApplicantComponent implements OnInit {
   minuteInterviewer: IInputCompobox = createComboBoxProps(' ', '', getAllMinutesInHour(), 'minute')
 
   btnCancel: IButton = btnInput("Cancel", "btn-gray", () => this.handleClickCancel())
-  btnSubmit: IButton = btnInput("Submit", "btn-blue", () => this.handleClickSubmit())
+  btnSubmit: IButton = btnInput("Submit", "btn-blue", (event) => this.handleClickSubmit(event))
 
   constructor(private modal: NzModalRef) { }
 
@@ -41,8 +41,9 @@ export class FormDetailApplicantComponent implements OnInit {
   handleClickCancel() {
     this.modal.destroy();
   }
-  handleClickSubmit() {
-   this.schedule
+  handleClickSubmit(event: unknown) {
+    console.log(event)
+    this.schedule
   }
 
   ngAfterContentInit() {

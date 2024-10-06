@@ -16,9 +16,9 @@ export class ButtonCommonComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  handleClick() {
+  handleClick(event: MouseEvent) {
     if (this.btnData?.onClick) {
-      this.btnData.onClick();
+      this.btnData.onClick(event);
     }
   }
 

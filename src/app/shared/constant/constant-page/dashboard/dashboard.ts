@@ -1,3 +1,4 @@
+import { IDataNewApplicants } from 'src/app/module/components/components.type';
 import { InterviewerStatus } from './../../../../module/interface/interview';
 import { IInterview } from "src/app/module/interface/interview"
 
@@ -43,7 +44,7 @@ export const COLUMN_TABLE_OPENED_JOBS = [
   },
 ]
 
-export const dataNewApplicants = [
+export const dataNewApplicants: IDataNewApplicants[] = [
   {
     key: 1,
     candidate_name: 'Guy Hawkins',

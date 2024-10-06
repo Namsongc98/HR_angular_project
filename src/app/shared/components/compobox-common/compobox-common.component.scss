@@ -1,9 +1,5 @@
 @import 'src/styles';
 
-nz-select {
-  margin: 0 8px 10px 0;
-  width: 120px;
-}
 
 .wp-combobox {
   position: relative;
@@ -19,12 +15,12 @@ nz-select {
     font-size: 17px;
   }
 
-  nz-select {
+  .ant-select {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100% !important;
-    height: 100%;
+    height: 40px;
     background-color: #fff;
     border: 2px solid $border_color;
     cursor: pointer;
@@ -36,9 +32,9 @@ nz-select {
 
     nz-select-top-control {
       padding: 5px 0 6px 12px !important;
-      height: inherit !important;
+      height: 36px !important;
 
-      nz-select-placeholder {
+      .ant-select-selection-search-input {
         color: #999;
         font-size: 16px;
       }

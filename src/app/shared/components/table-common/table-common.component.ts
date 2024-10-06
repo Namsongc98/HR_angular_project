@@ -9,7 +9,7 @@ import { CONSTANTS_ACTION, CONSTANTS_STATUS_CV } from '../../constant/constant-p
 
 })
 export class TableCommonComponent implements OnInit {
-  @Input() dataTable: IInputTable = { columns: [], data: [] }
+  @Input() dataTable: IInputTable  = { columns: [], data: [] }
   @Output() onDoubleClick = new EventEmitter<{ event: MouseEvent, data: any }>()
 
   constructor() { }

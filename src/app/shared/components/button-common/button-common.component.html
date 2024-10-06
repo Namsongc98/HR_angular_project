@@ -1,5 +1,5 @@
 <button
   class="pt-08 pb-08 pl-32 pr-32 font-600 font-md cursor-pointer"
   [ngClass]="btnData.styleBtn"
-  (click)="handleClick()"
+  (click)="handleClick($event)"
 >{{btnData.label}}</button>
