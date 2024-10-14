@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { NzModalRef } from 'ng-zorro-antd/modal';
 import { IButton, IDatePick, IInputCompobox } from 'src/app/module/components/components.type';
 import { IInterViewForm } from 'src/app/module/interface/interview';
@@ -11,14 +12,16 @@ import { btnInput, createComboBoxProps, createDateInput, getAllHoursInDay, getAl
   styleUrls: ['./form-detail-applicant.component.scss']
 })
 export class FormDetailApplicantComponent implements OnInit {
-  schedule: IInterViewForm = {
-    interviewer: '',
-    interviewerDate: '',
-    hour: '',
-    minute: ''
-  }
+  schedule = 
+    {
+      interviewer: "",
+      interviewerDate: "",
+      hour:"",
+      minute: ""
+    }
+  
   compoboxInterviewer: IInputCompobox = createComboBoxProps('Interviewer', 'Select Interviewer', CONST_INTERVIEWER, 'interviewer')
-  dateStart: IDatePick = createDateInput("Start date", this.schedule.interviewerDate, '', 'interviewerDate', 'Select start date', 'interviewerDate')
+  dateStart: IDatePick = createDateInput("Start date", this.schedule.interviewerDate, '', 'interviewerDate', 'Select start date', 'date')
   hourInterviewer: IInputCompobox = createComboBoxProps(' ', '', getAllHoursInDay(), 'hour')
   minuteInterviewer: IInputCompobox = createComboBoxProps(' ', '', getAllMinutesInHour(), 'minute')
 
@@ -31,18 +34,18 @@ export class FormDetailApplicantComponent implements OnInit {
   }
 
   handleChange(event: unknown, key: keyof IInterViewForm) {
+    console.log(event)
     if (typeof event === 'string') {
-      this.schedule[key] = event
+      this.schedule[key] = (event)
     }
     if (typeof event === "object" && event !== null) {
-      this.schedule[key] = (event as { value: string }).value;
+      this.schedule[key] = ((event as { value: string }).value);
     }
   }
   handleClickCancel() {
     this.modal.destroy();
   }
   handleClickSubmit(event: unknown) {
-    console.log(event)
     this.schedule
   }
 
