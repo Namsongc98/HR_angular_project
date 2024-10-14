@@ -10,7 +10,7 @@ import { IDatePick } from 'src/app/module/components/components.type';
 export class DatePickCommonComponent implements OnInit {
   @Input() dataInput: IDatePick = { label: '', value: '', defaultValue: '', name: '', placeholder: '',type:'date' };
   isEnglish = false;
-  @Output() handleChange = new EventEmitter()
+  @Output() onChange = new EventEmitter<string>()
   constructor(private i18n: NzI18nService) { }
 
   ngOnInit(): void {

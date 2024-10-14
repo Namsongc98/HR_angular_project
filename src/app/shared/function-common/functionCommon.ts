@@ -22,7 +22,7 @@ export const createComboBoxProps = (label: string, placeholder: string, listData
   listDataComboBox,
   name
 })
-export const createDateInput = (label: string, value: string, defaultValue: string, name: string, placeholder: string, type: string) => ({
+export const createDateInput = (label: string, value: any, defaultValue: string, name: string, placeholder: string, type: string) => ({
   label,
   value,
   defaultValue,

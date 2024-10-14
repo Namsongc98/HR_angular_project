@@ -14,7 +14,6 @@ export class TableCommonComponent implements OnInit {
 
   constructor() { }
   ngOnInit(): void {
-    console.log(this.dataTable);
   }
   handleDoubleClick(event: MouseEvent, data: any) {
     this.onDoubleClick.emit({ event, data })

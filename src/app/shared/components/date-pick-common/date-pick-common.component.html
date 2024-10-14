@@ -3,6 +3,7 @@
   <nz-date-picker
     [(ngModel)]="dataInput.value"
     [nzMode]="dataInput.type"
-    (ngModelChange)="handleChange.emit($event)"
+    (ngModelChange)="onChange.emit($event)"
+    [nzFormat]="'dd/MM/yyyy'"
   ></nz-date-picker>
 </div>

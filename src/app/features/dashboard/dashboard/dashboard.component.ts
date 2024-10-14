@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
   dataInterview = dataInterview;
   CONSTANTS_STATUS_INTERVIEWER = CONSTANTS_STATUS_INTERVIEWER;
   listNumber = listNumber;
-// table new applicants
+  // table new applicants
   dataTableJobRequest: {
     columns: IColumn[];
     data: any[];
@@ -33,7 +33,7 @@ export class DashboardComponent implements OnInit {
       columns: COLUMN_TABLE__NEW_APPLICANTS,
       data: [],
     }
-// table opened jobs
+  // table opened jobs
   dataTableOpened: {
     columns: IColumn[];
     data: any[];
@@ -47,12 +47,18 @@ export class DashboardComponent implements OnInit {
     this.callApiNewApplicants();
   }
 
+  handleChange(event: unknown, name: string) {
+    console.log('event', event);
+    console.log('name', name);
+  }
+
   callApiOpenedJobs() {
     this.isLoading = true;
     this._dashboardService.getOpenedJobs().pipe(
       finalize(() => {
         this.isLoading = false;
       }),
+      takeUntil(this.destroy$)
     ).subscribe({
       next: (value) => {
         this.dataTableOpened = tableInput(
@@ -61,7 +67,6 @@ export class DashboardComponent implements OnInit {
         );
       },
       error: (err) => {
-        console.log(err)
         this.dataTableOpened = { columns: [], data: [] };
       },
     }
@@ -73,7 +78,8 @@ export class DashboardComponent implements OnInit {
     this._dashboardService.getNewApplicants().pipe(
       finalize(() => {
         this.isLoading = false;
-      })
+      }),
+      takeUntil(this.destroy$)
     ).subscribe({
       next: (value) => {
         this.dataTableJobRequest = tableInput(
@@ -82,16 +88,12 @@ export class DashboardComponent implements OnInit {
         );
       },
       error: (err) => {
-        console.log(err)
         this.dataTableJobRequest = { columns: [], data: [] };
       },
     });
   }
 
-  handleChange(event: unknown, name: string) {
-    console.log(event);
-    console.log(name);
-  }
+
 
   ngOnDestroy(): void {
     this.destroy$.next();
